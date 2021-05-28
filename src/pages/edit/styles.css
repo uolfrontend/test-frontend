@@ -1,0 +1,71 @@
+#customer-form-panel {
+    width: min(90vw, 800px);
+    margin: auto;
+    margin-top: 5rem;
+}
+
+.header-new-customer {
+    margin-top: 1.25rem;
+}
+
+.header-new-customer h4 {
+    margin-bottom: 1rem;
+}
+
+form {
+    margin-top: 2.5rem;
+    margin-bottom: 1.25rem;
+    max-width: 205px;
+}
+
+.input-group {
+    margin-top: 1rem;
+    padding-right: 0.5rem;
+}
+
+.input-container {
+    padding: 0.5rem;
+    width: 100%;
+    border: #e5e4df solid 1px;
+    border-radius: 0.25rem;
+    color: #646c6e;
+}
+
+.actions {
+    padding: 0;
+    margin-top: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.create-button {
+    width: 100%;
+    background: #df9c3a;
+    color: #fff;
+    border: #df9c3a solid 1px;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin-right: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.create-button:hover {
+    opacity: 0.8;
+}
+
+.cancel-button {
+    width: 100%;
+    border: #df9c3a solid 1px;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    color: #df9c3a;
+    text-align: center;
+    cursor: pointer;
+}
+
+.cancel-button:hover {
+    background: #df9c3a;
+    color: #fff;
+}

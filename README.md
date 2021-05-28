@@ -1,32 +1,10 @@
-# Teste front-end - UOL Produtos Digitais
+#Teste UOL
 
-### O Desafio
+- Criei uma aplicação em react seguindo todas as especificações obrigatórias.
+- Para realizar o consumo do endpoint, devido a restrições de CORS, criei um servidor que consome o endpoint e repassa os dados via localhost. Portanto para total funcionamento é necessário iniciar o servidor.
+- Para iniciar a aplicação usar o script "start"
+- Para iniciar o servidor usar o comando node ./server/index.js
 
-A aplicação deve mostrar primeiramente uma listagem de clientes com todas informações conforme o layout. Segundo, deve permitir a criação de novo cliente.
+Muito obrigado pela oportunidade que vocês me deram.
 
-### Começando
-
-Utilize o seguinte [endpoint](https://test-frontend-uolpp.web.app/customers.json) para o carregamento inicial da listagem de clientes.
-
-### Itens obrigatórios
-
-- Alertas para o usuário na tela de edição
-- Validação de CPF na tela de edição
-- Validação de telefone na tela de edição
-- Utilizar o *localStorage/IndexedDB* para persistir localmente as informações
-- Código limpo e organizado
-- Responsividade
-
-### Itens desejáveis
-
-- Testes unitários
-- React
-
-### Telas
-
-- [Tela inicial](https://test-frontend-uolpp.web.app/assets/images/tela-inicial.jpg)
-- [Tela de edição](https://test-frontend-uolpp.web.app/assets/images/tela-edicao.jpg)
-
-### Finalizando
-
-Ao finalizar seu teste nos envie um **pull request**.
+Atenciosamente Renan Bandeira.

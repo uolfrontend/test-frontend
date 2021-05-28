@@ -1,0 +1,17 @@
+#title {
+    color: #61646c;
+    padding-bottom: 1.25rem;
+    width: 100%;
+    border-bottom: #e5e4df solid 1px;
+    display: flex;
+    align-items: center;
+}
+
+#title h2 {
+    font-weight: normal
+}
+
+#title img {
+    height: 1rem;
+    margin-right: 1rem;
+}
