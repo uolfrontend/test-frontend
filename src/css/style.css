@@ -1,0 +1,356 @@
+.header {
+  background: #333333;
+  max-height: 80px;
+}
+.header__content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header__logo {
+  max-height: 85px;
+  max-width: 120px;
+}
+
+.card__info {
+  margin: 10px 30px;
+  text-align: left;
+  flex: 1;
+}
+@media (max-width: 767.98px) {
+  .card__info {
+    text-align: center;
+  }
+}
+.card__name, .card__id, .card__button {
+  font-size: 1.8rem;
+}
+.card__name:not(:last-child), .card__id:not(:last-child), .card__button:not(:last-child) {
+  color: #646c72;
+}
+.card__email, .card__phone {
+  color: #646c72;
+  font-size: 1.7rem;
+}
+.card__button {
+  border: 1px solid #e29832;
+  font-size: 1.6rem;
+  background: #FFF;
+  color: #e29832;
+  border-radius: 5px;
+  padding: 10px 35px;
+  cursor: pointer;
+  text-align: center;
+}
+.card__button:hover {
+  background: #e29832;
+  color: #FFF;
+  transition: 1s;
+}
+.card__estado__active {
+  color: #646c72;
+  font-size: 1.8rem;
+}
+.card__estado__active::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 7.5px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background: #2ecd8a;
+}
+.card__estado__inactive {
+  color: #646c72;
+  font-size: 1.8rem;
+}
+.card__estado__inactive::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 7.5px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background: red;
+}
+.card__estado__disabled {
+  color: #646c72;
+  font-size: 1.8rem;
+}
+.card__estado__disabled::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 7.5px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background: grey;
+}
+.card__estado__waiting {
+  color: #646c72;
+  font-size: 1.8rem;
+}
+.card__estado__waiting::before {
+  content: "";
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  -moz-border-radius: 7.5px;
+  -webkit-border-radius: 7.5px;
+  border-radius: 7.5px;
+  margin-right: 10px;
+  vertical-align: middle;
+  background: yellow;
+}
+
+.card-container {
+  margin-left: 14%;
+  margin-right: 14%;
+}
+
+.formulario {
+  width: 50%;
+  max-width: 600px;
+  margin-top: 30px;
+}
+@media (max-width: 767.98px) {
+  .formulario {
+    width: 100%;
+  }
+}
+.formulario__flex-outer {
+  max-width: 800px;
+}
+.formulario__flex-outer-item {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.formulario__flex-outer-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  width: 50%;
+  justify-content: space-evenly;
+}
+@media (max-width: 767.98px) {
+  .formulario__flex-outer-buttons {
+    flex-direction: row;
+    margin: 0 auto;
+    width: 80%;
+    margin-bottom: 30px;
+  }
+}
+.formulario__button-submit {
+  border: 1px solid #e29832;
+  font-size: 1.6rem;
+  background: #e29832;
+  color: #FFF;
+  border-radius: 5px;
+  padding: 10px 40px;
+  cursor: pointer;
+  text-align: center;
+}
+.formulario__button-submit:hover {
+  background: #FFF;
+  color: #e29832;
+  transition: 1s;
+}
+.formulario__button-redirect {
+  border: 1px solid #e29832;
+  font-size: 1.6rem;
+  background: #FFF;
+  color: #e29832;
+  border-radius: 5px;
+  padding: 10px 40px;
+  cursor: pointer;
+  text-align: center;
+}
+.formulario__button-redirect:hover {
+  background: #e29832;
+  color: #FFF;
+  transition: 1s;
+}
+
+input, select {
+  width: 50%;
+  padding: 12px 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+  outline: none;
+  font-size: 1.5rem;
+  color: #696e75;
+}
+@media (max-width: 767.98px) {
+  input, select {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+input:focus {
+  border: 1px solid #ccc;
+}
+
+.error-msg {
+  font-size: 1.75rem;
+  color: red;
+  font-weight: 500;
+  margin-left: 2rem;
+}
+@media (max-width: 767.98px) {
+  .error-msg {
+    width: 80%;
+    margin: 0;
+  }
+}
+
+@font-face {
+  font-family: Lato;
+  src: url(../assets/fonts/Lato-Regular.ttf);
+}
+body {
+  font-family: "Lato";
+}
+
+.main {
+  margin-top: 60px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+@media (max-width: 767.98px) {
+  .main {
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+}
+.main__top {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+}
+.main__border {
+  margin-top: 30px;
+  border-bottom: 1px solid #646c72;
+}
+.main__user {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
+}
+.main__user__listagem {
+  text-align: left;
+}
+.main__card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #f2f3f2;
+  margin-top: 30px;
+  flex-direction: row;
+}
+@media (max-width: 767.98px) {
+  .main__card {
+    flex-direction: column;
+  }
+}
+
+.titulo__info {
+  color: #3b3b3a;
+  text-align: left;
+}
+.titulo__icon {
+  max-height: 30px;
+  margin-right: 2rem;
+}
+
+.listagem__intro {
+  margin-bottom: 20px;
+  color: #646c72;
+  font-size: 2rem;
+}
+.listagem__info {
+  color: #696e75;
+  font-size: 1.7rem;
+}
+.listagem__novo-usuario {
+  background: #e29832;
+  color: #fedfb0;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1.7rem;
+  cursor: pointer;
+}
+@media (max-width: 767.98px) {
+  .listagem__novo-usuario {
+    padding: 10px 20px;
+    font-size: 1.5rem;
+  }
+}
+.listagem__novo-usuario:hover {
+  opacity: 0.9;
+}
+
+.quantidadeExibicao {
+  margin-left: 14%;
+  margin-right: 14%;
+  margin-top: 20px;
+  text-align: left;
+  margin-bottom: 30px;
+}
+.quantidadeExibicao__aviso {
+  color: #3b3b3a;
+  font-size: 1.7rem;
+}
+
+.swal2-popup {
+  width: 40% !important;
+  height: 100%;
+}
+@media (max-width: 767.98px) {
+  .swal2-popup {
+    width: 100% !important;
+  }
+}
+
+.swal2-title {
+  font-size: 3rem !important;
+}
+
+.swal2-html-container {
+  font-size: 2rem !important;
+}
+
+.swal2-styled {
+  padding: 15px 35px !important;
+}
+
+.swal2-styled.swal2-confirm {
+  font-size: 1.5rem !important;
+  background-color: #e29832 !important;
+}
+
+.swal2-styled.swal2-confirm:hover {
+  opacity: 0.8;
+}
+
+.swal2-styled.swal2-confirm:focus {
+  box-shadow: 0 0 0 3px #e29832 !important;
+}
+
+/*# sourceMappingURL=style.css.map */

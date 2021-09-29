@@ -1,0 +1,110 @@
+.card{
+  &__info{
+    margin: 10px 30px;
+    text-align: left;
+    flex: 1;
+    @include for-phone-only{
+      text-align: center;
+    }
+  }
+  &__name, &__id, &__button{
+    &:not(:last-child){
+      color: $grey-alter;
+    }
+    font-size: 1.8rem;
+
+  }
+  &__email, &__phone{
+    color: $grey-alter;
+    font-size: 1.7rem;
+
+  }
+
+  &__button{
+    border: 1px solid $orange-button;
+    font-size: 1.6rem;
+    background: $white;
+    color: $orange-button;
+    border-radius: 5px;
+    padding: 10px 35px;
+    cursor: pointer;
+    text-align: center;
+    &:hover{
+      background: $orange-button;
+      color: $white;
+      transition: 1s;
+    }
+  }
+
+
+  &__estado__active{
+    color: $grey-alter;
+    font-size: 1.8rem;
+    &::before{
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      -moz-border-radius: 7.5px;
+      -webkit-border-radius: 7.5px; 
+      border-radius: 7.5px;
+      margin-right: 10px;
+      vertical-align: middle; 
+      background: $active;
+    }
+  }
+  &__estado__inactive{
+    color: $grey-alter;
+    font-size: 1.8rem;
+    &::before{
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      -moz-border-radius: 7.5px;
+      -webkit-border-radius: 7.5px; 
+      border-radius: 7.5px;
+      margin-right: 10px;
+      vertical-align: middle; 
+      background: $inactive;
+    }
+  }
+
+  &__estado__disabled{
+    color: $grey-alter;
+    font-size: 1.8rem;
+    &::before{
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      -moz-border-radius: 7.5px;
+      -webkit-border-radius: 7.5px; 
+      border-radius: 7.5px;
+      margin-right: 10px;
+      vertical-align: middle; 
+      background: $off;
+    }
+  }
+  &__estado__waiting{
+    color: $grey-alter;
+    font-size: 1.8rem;
+    &::before{
+      content: "";
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      -moz-border-radius: 7.5px;
+      -webkit-border-radius: 7.5px; 
+      border-radius: 7.5px;
+      margin-right: 10px;
+      vertical-align: middle; 
+      background: $wait;
+    }
+  }
+}
+
+.card-container{
+  margin-left: 14%;
+  margin-right: 14%;
+}

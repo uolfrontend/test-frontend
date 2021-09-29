@@ -1,0 +1,60 @@
+{
+  "customers": [
+    {
+      "id": "512.536.530-03",
+      "name": "Camila Souza",
+      "email": "camila.souza@email.com",
+      "phone": "(11) 93463-2347",
+      "status": "active"
+    },
+    {
+      "id": "397.553.820-11",
+      "name": "Pedro Ferreira",
+      "email": "peferreira@email.com",
+      "phone": "(11) 95529-5678",
+      "status": "inactive"
+    },
+    {
+      "id": "921.818.210-20",
+      "name": "Marcela Silva",
+      "email": "masilva@email.com",
+      "phone": "(11) 93470-3391",
+      "status": "waiting"
+    },
+    {
+      "id": "533.278.870-39",
+      "name": "Carlos Ferraz",
+      "email": "carlosferraz@email.com",
+      "phone": "(11) 96744-0233",
+      "status": "disabled"
+    },
+    {
+      "id": "068.615.510-66",
+      "name": "Pedro Silveira",
+      "email": "pedro@gmail.com",
+      "phone": "(11) 92244-5588",
+      "status": "waiting"
+    },
+    {
+      "name": "Airton Sampaio",
+      "email": "airton@gmail.com",
+      "id": "720.565.010-07",
+      "phone": "(11) 94040-0984",
+      "status": "inactive"
+    },
+    {
+      "name": "Marcos Oliveira",
+      "email": "marcos@gmail.com",
+      "id": "988.725.660-96",
+      "phone": "(11) 98446-5768",
+      "status": "active"
+    },
+    {
+      "id": "596.598.740-49",
+      "name": "Carlos Henrique",
+      "email": "carlos@gmail.com",
+      "phone": "(11) 94432-5465",
+      "status": "disabled"
+    }
+  ]
+}

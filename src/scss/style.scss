@@ -1,0 +1,159 @@
+$title: #3b3b3a;
+$grey: #717171;
+$grey-alter: #646c72;
+$grey-light: #696e75;
+$orange-button: #e29832;
+$pre-white: rgba(254,223,176,255);
+$white: #FFF;
+$border: rgba(242,243,242,255);
+
+$active: #2ecd8a;
+$inactive: red;
+$wait: yellow;
+$off: grey;
+
+@mixin for-phone-only{
+  @media (max-width: 767.98px) { @content; }
+}
+
+@import 'header', 'card', 'cadastro'; 
+
+@font-face {
+  font-family: Lato;
+  src: url(../assets/fonts/Lato-Regular.ttf);
+}
+$lato: "Lato";
+body{
+  font-family: $lato;
+}
+.main{
+  margin-top: 60px;
+  margin-left: 15%;
+  margin-right: 15%;
+
+  @include for-phone-only{
+    margin-left: 6%;
+    margin-right: 6%;
+  }
+
+  &__top{
+    display: flex; 
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+  }
+
+  &__border{
+    margin-top: 30px;
+    border-bottom: 1px solid $grey-alter;
+  }
+
+  &__user{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 30px; 
+  }
+  &__user__listagem{
+    text-align: left;
+  }
+
+  &__card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid $border;
+    margin-top: 30px;
+    flex-direction: row;
+    @include for-phone-only{
+      flex-direction: column;
+    }
+  }
+}
+
+.titulo{
+  &__info{
+    color: $title;
+    text-align: left;
+  }
+
+  &__icon{
+    max-height: 30px;
+    margin-right: 2rem;
+  }
+}
+
+.listagem{
+
+  &__intro{
+    margin-bottom: 20px;
+    color: $grey-alter;
+    font-size: 2rem;
+  }
+  &__info{
+    color: $grey-light;
+    font-size: 1.7rem;
+  }
+
+  &__novo-usuario{
+    background: $orange-button;
+    color: $pre-white;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 1.7rem;
+    cursor: pointer;
+    @include for-phone-only{
+      padding: 10px 20px;
+      font-size: 1.5rem;
+    }
+
+    &:hover{
+      opacity: 0.9;
+    }
+  }
+}
+
+.quantidadeExibicao{
+  margin-left: 14%;
+  margin-right: 14%;
+  margin-top: 20px;
+  text-align: left;
+  margin-bottom: 30px;
+  &__aviso{
+    color: $title;
+    font-size: 1.7rem;
+  }
+}
+
+.swal2-popup {
+  width: 40%!important;
+  height: 100%;
+
+  @include for-phone-only{
+    width: 100%!important;
+  }
+}
+
+.swal2-title {
+  font-size: 3rem!important;
+}
+
+.swal2-html-container {
+  font-size: 2rem!important;
+}
+.swal2-styled {
+  padding: 15px 35px!important;
+}
+
+.swal2-styled.swal2-confirm {
+  font-size: 1.5rem!important;
+  background-color: $orange-button!important;
+}
+.swal2-styled.swal2-confirm:hover{
+  opacity: .8;
+}
+
+.swal2-styled.swal2-confirm:focus {
+  box-shadow: 0 0 0 3px $orange-button!important; 
+}

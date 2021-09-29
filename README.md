@@ -1,32 +1,11 @@
-# Teste front-end - UOL Produtos Digitais
+Tecnologias utilizadas: React e Sass.
 
-### O Desafio
+Utilizei a biblioteca JSON Server para simular uma API, o arquivo se encontra em src/data/db.json;
+CPF Validator para apoio à validação de CPF;
+Yup para apoio no formulário e tratar possíveis erros;
+Sweet Alert2 para exibir os avisos ao usuário;
+Axios para uso dos métodos GET/POST/PUT;
 
-A aplicação deve mostrar primeiramente uma listagem de clientes com todas informações conforme o layout. Segundo, deve permitir a criação de novo cliente.
-
-### Começando
-
-Utilize o seguinte [endpoint](https://test-frontend-uolpp.web.app/customers.json) para o carregamento inicial da listagem de clientes.
-
-### Itens obrigatórios
-
-- Alertas para o usuário na tela de edição
-- Validação de CPF na tela de edição
-- Validação de telefone na tela de edição
-- Utilizar o *localStorage/IndexedDB* para persistir localmente as informações
-- Código limpo e organizado
-- Responsividade
-
-### Itens desejáveis
-
-- Testes unitários
-- React
-
-### Telas
-
-- [Tela inicial](https://test-frontend-uolpp.web.app/assets/images/tela-inicial.jpg)
-- [Tela de edição](https://test-frontend-uolpp.web.app/assets/images/tela-edicao.jpg)
-
-### Finalizando
-
-Ao finalizar seu teste nos envie um **pull request**.
+Apoio:
+Para inicializar a aplicação, executar o comando:
+json-server --watch data/db.json --port 3002
