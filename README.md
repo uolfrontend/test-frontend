@@ -1,32 +1,35 @@
-# Teste front-end - UOL Produtos Digitais
+# UOL Processo Seletivo
 
-### O Desafio
+Front End desenvolvido para o Processo Seletivo da UOL
 
-A aplicação deve mostrar primeiramente uma listagem de clientes com todas informações conforme o layout. Segundo, deve permitir a criação de novo cliente.
+### Instalação
 
-### Começando
+Para que você possa rodar o projeto em sua máquina é necessário ter algumas coisas instaladas:
 
-Utilize o seguinte [endpoint](https://test-frontend-uolpp.web.app/customers.json) para o carregamento inicial da listagem de clientes.
+- NodeJS
+- Npm ou Yarn
 
-### Itens obrigatórios
+### Executando o projeto
 
-- Alertas para o usuário na tela de edição
-- Validação de CPF na tela de edição
-- Validação de telefone na tela de edição
-- Utilizar o *localStorage/IndexedDB* para persistir localmente as informações
-- Código limpo e organizado
-- Responsividade
+- Basta clonar este repositório em seu PC
+- Execute `yarn` ou `npm install`
+- E agora é só rodar o projeto com um dos comandos a seguir: `yarn start OU npm start`
 
-### Itens desejáveis
+### ✅ Features
 
-- Testes unitários
-- React
+- [x] Página Inicial
+- [x] Página de criação de cliente
+- [x] Páginas responsivas
+- [x] Avisos em tela para o usuário
+- [x] Validação de CPF
+- [x] Página de E-mail
+- [x] Utilizando Local Storage
+- [x] Feito com React
+- [ ] Código limpo e organizado
+- [ ] Testes
+- [ ] Página de edição de cliente
 
-### Telas
+### Layout o projeto
 
-- [Tela inicial](https://test-frontend-uolpp.web.app/assets/images/tela-inicial.jpg)
-- [Tela de edição](https://test-frontend-uolpp.web.app/assets/images/tela-edicao.jpg)
-
-### Finalizando
-
-Ao finalizar seu teste nos envie um **pull request**.
+<img src="https://test-frontend-uolpp.web.app/assets/images/tela-inicial.jpg" alt="Tela inicial do projeto">
+<img src="https://test-frontend-uolpp.web.app/assets/images/tela-edicao.jpg" alt="Tela de edição">
