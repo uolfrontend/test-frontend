@@ -5,6 +5,7 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   flex-direction: column;
+  padding: 0 10% 0 10%;
 `
 export const GridContainerMain = styled.div`
   display: grid;
@@ -63,7 +64,9 @@ export const SelectBox = styled.select`
 `
 export const ButtonCriar = styled.button`
   width: 90%;
-  padding: 5%;
+  padding: 8%;
+  margin-top: 50px;
+  font-size: 15px;
   border-radius: 5px;
   border-color: rgba(228, 177, 105, 255);
   border-width: 1px;
@@ -73,7 +76,9 @@ export const ButtonCriar = styled.button`
 `
 export const ButtonVoltar = styled.button`
   width: 90%;
-  padding: 5%;
+  padding: 8%;
+  margin-top: 50px;
+  font-size: 15px;
   border-radius: 5px;
   border-color: rgba(228, 177, 105, 255);
   border-width: 1px;

@@ -4,8 +4,8 @@ import { H2Div, H3Div } from './style'
 function EditUser(props) {
   return (
     <div>
-      <h2>Editar Usuário</h2>
-      <text>Informe os campos a seguir para editar o usuário</text>
+      <H2Div>Editar Usuário</H2Div>
+      <H3Div>Informe os campos a seguir para editar o usuário</H3Div>
     </div>
   )
 }

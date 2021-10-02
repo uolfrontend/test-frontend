@@ -5,6 +5,7 @@ export const Container = styled.div`
   justify-content: center;
   width: 100%;
   flex-direction: column;
+  padding: 0 10% 0 10%;
 `
 export const GridContainerMain = styled.div`
   display: grid;
@@ -15,12 +16,13 @@ export const GridContainerMain = styled.div`
 export const GridContainer = styled.div`
   display: grid;
   border: 1px solid rgb(237, 237, 237);
-  grid-template-columns: 25% 25% 25% 25%;
-  padding: 8px;
-  @media(max-width: 1024px) {
-    grid-template-columns: auto auto auto;
+  grid-template-columns: 24% 24% 24% 24%;
+  padding: 15px;
+  grid-gap: 10px;
+  @media(max-width: 1080px) {
+    grid-template-columns: 32% 32% 32%;
   }
-  @media(max-width: 700px) {
+  @media(max-width: 850px) {
     grid-template-columns: auto;
   }
 `
@@ -29,9 +31,9 @@ export const GridItem = styled.div`
   background-color: rgba(255, 255, 255);
   border: 0px solid rgba(0, 0, 0, 0.8);
   font-size: 15px;
-  text-align: start;
+  text-align: ${props => props.notBtn ? "start" : "center"};
   align-self: center;
-  @media(max-width: 700px) {
+  @media(max-width: 850px) {
     text-align: center;
   }
 `
@@ -70,10 +72,12 @@ export const BtEditPage = styled.button`
   background-color:  ${props => props.novo ? "rgba(226,153,51,255)" : "white"};
   color: ${props => props.novo ? "white":"rgba(226,153,51,255)"};
   border-color: rgba(229,203,154,255);
-  padding: 10px 20px 10px 20px;
+  padding: ${props => props.novo ? "10px 20px 10px 20px": "10px 25px 10px 25px"};
   font-size: 18px;
   border-radius: 5px;
-  margin-right: 5%;
+  margin-right:  ${props => props.novo ? "5%" : ""};;
+  width: ${props => props.novo ? "" : "50%"};
+  min-width: 100px;
 
   &:hover{
     background-color: ${props => props.novo ? "white":"rgba(226,153,51,255)"};

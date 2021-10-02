@@ -73,21 +73,21 @@ function TelaInicial({ loadAllCustomers }) {
           const { id, name, email, phone, status } = customer
           return (
             <GridContainer key={id}>
-              <GridItem>
+              <GridItem notBtn>
                 <Bold>{name}</Bold>
                 <UserValues>{email}</UserValues>
               </GridItem>
-              <GridItem>
+              <GridItem notBtn>
                 <Bold>{id}</Bold>
                 <UserValues>{phone}</UserValues>
               </GridItem>
-              <GridItem>
+              <GridItem notBtn>
                 <UserValues>
                 <Dot tipo={status}></Dot>
                 <Status tipoStatus = {status}/>
                 </UserValues>
               </GridItem>
-              <GridItem>
+              <GridItem notBtn={false}>
                 <BtEditPage
                   onClick={() => handleEditCustomer(customer)}
                   novo={false}
