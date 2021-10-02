@@ -1,6 +1,6 @@
 # Teste Frontend Uol
 
-Para rodar o projeto utilize esses dois comandos na sequência:
+Para rodar o projeto utilize esses 3 comandos na sequência:
 
 ### `yarn install`
 ### `yarn server`
