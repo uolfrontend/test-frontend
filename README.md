@@ -2,7 +2,7 @@
 
 Para rodar o projeto utilize esses dois comandos na sequência:
 
-### `yarn server`
+### `yarn install`
 ### `yarn server`
 ### `yarn start`
 
