@@ -1,0 +1,19 @@
+@font-face {
+  font-family: UolTextRegular;
+  src: url(./assets/fonts/uol-text-regular.ttf);
+}
+
+@font-face {
+  font-family: UolTextLight;
+  src: url(./assets/fonts/uol-text-light.ttf);
+}
+
+body {
+  margin: 0;
+  font-family: 'UolTextRegular', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+/*
+color: #e69941 - laranja 
+*/
