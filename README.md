@@ -1,8 +1,6 @@
 # Teste front-end - UOL Produtos Digitais
 
 <p align="center" style="text-align: center;">
-  <img src="https://c.tenor.com/dp4wyZ0yRUcAAAAC/duke-nukem-gaming.gif" width="480"/>
-  <br><br>
   <samp>
     Coded by Giovanni Tonussi.<br>
     Obrigado por conferir!<br>
