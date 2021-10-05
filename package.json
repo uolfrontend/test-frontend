@@ -1,0 +1,29 @@
+{
+  "name": "universo-online",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev -p 3005",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@hookform/resolvers": "^2.8.1",
+    "axios": "^0.22.0",
+    "json-server": "^0.16.3",
+    "next": "11.1.2",
+    "prop-types": "^15.7.2",
+    "react": "17.0.2",
+    "react-dom": "17.0.2",
+    "react-hook-form": "^7.17.0",
+    "styled-components": "^5.3.1",
+    "styled-normalize": "^8.0.7",
+    "yup": "^0.32.9"
+  },
+  "devDependencies": {
+    "babel-plugin-styled-components": "^1.13.2",
+    "eslint": "7.32.0",
+    "eslint-config-next": "11.1.2"
+  }
+}

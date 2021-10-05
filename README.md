@@ -1,32 +1,47 @@
 # Teste front-end - UOL Produtos Digitais
 
-### O Desafio
+<p align="center" style="text-align: center;">
+  <img src="https://c.tenor.com/dp4wyZ0yRUcAAAAC/duke-nukem-gaming.gif" width="480"/>
+  <br><br>
+  <samp>
+    Coded by Giovanni Tonussi.<br>
+    Obrigado por conferir!<br>
+    Por favor leia as instruções abaixo:
+  </samp>
+</p>
 
-A aplicação deve mostrar primeiramente uma listagem de clientes com todas informações conforme o layout. Segundo, deve permitir a criação de novo cliente.
+---------------------------
 
-### Começando
+### Infra:
 
-Utilize o seguinte [endpoint](https://test-frontend-uolpp.web.app/customers.json) para o carregamento inicial da listagem de clientes.
+Este projeto foi criado com ```next.js```. 
+Mais sobre o framework: https://nextjs.org/
 
-### Itens obrigatórios
+A estilização foi feita toda com ```styled-components```. 
+Mais sobre a lib: https://styled-components.com/
 
-- Alertas para o usuário na tela de edição
-- Validação de CPF na tela de edição
-- Validação de telefone na tela de edição
-- Utilizar o *localStorage/IndexedDB* para persistir localmente as informações
-- Código limpo e organizado
-- Responsividade
+Usei também algumas libs para aumentar a produtividade. São elas:
 
-### Itens desejáveis
+- ```axios``` para requisições a API.
+- ```json-server``` para criar um server fake.
 
-- Testes unitários
-- React
+- ```react-hook-form``` para criação dos formulários.
+- ```yup``` para validação dos formulários.
 
-### Telas
+### IMPORTANTE: 
 
-- [Tela inicial](https://test-frontend-uolpp.web.app/assets/images/tela-inicial.jpg)
-- [Tela de edição](https://test-frontend-uolpp.web.app/assets/images/tela-edicao.jpg)
+Como o endpoint foi configurado para não aceitar cross-origin, baixei o json e criei um server a partir dele. Dessa forma, o código foi criado para fazer requisições a uma API externa.
 
-### Finalizando
+**Para criar o server, é necessário instalar o ```json-server```:**
 
-Ao finalizar seu teste nos envie um **pull request**.
+- Abra um terminal/cmd na pasta do projeto
+- Rode: *npm install -g json-server*
+- Rode: *json-server --watch db.json*
+
+**Deixar a porta 3000 livre :)**
+
+Para rodar o projeto:
+
+- Abra um terminal/cmd na pasta do projeto
+- Rode: *yarn install*
+- Crie um preview: *yarn dev*

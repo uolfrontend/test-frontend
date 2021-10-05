@@ -1,0 +1,39 @@
+{
+  "customers": [
+    {
+      "name": "Camila Souza",
+      "email": "camila.souza@email.com",
+      "id": "512.536.530-03",
+      "phone": "(11) 93463-2332",
+      "status": "Ativo"
+    },
+    {
+      "name": "Pedro Ferreiraa",
+      "email": "peferreira@email.com",
+      "id": "397.553.820-11",
+      "phone": "(11) 95529-5678",
+      "status": "Inativo"
+    },
+    {
+      "id": "921.818.210-20",
+      "name": "Marcela Silva",
+      "email": "masilva@email.com",
+      "phone": "(11) 93470-3391",
+      "status": "Aguardando"
+    },
+    {
+      "name": "Carlos Ferraz",
+      "email": "carlosferraz@email.com",
+      "id": "533.278.870-39",
+      "phone": "(11) 96744-0233",
+      "status": "Desativado"
+    },
+    {
+      "name": "Giovanni Tonussi",
+      "email": "gtonussi@gmail.com",
+      "id": "410.673.268-80",
+      "phone": "(11) 96903-3093",
+      "status": "Ativo"
+    }
+  ]
+}
