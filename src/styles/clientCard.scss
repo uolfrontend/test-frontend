@@ -1,0 +1,54 @@
+.client-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    padding: 1.5rem;
+    border: 1px solid #aeadad;
+    font-size: 1.3rem;
+};
+
+.name-email, .phone-cpf{
+    .bold-text{
+        font-weight: 400;
+        color: #7a7a7a;
+    };
+    .light-text{
+        font-weight: 300;
+        color: #aeadad;
+    };
+};
+
+.status-user{
+    display: flex;
+    align-items: center;
+
+    font-weight: 300;
+    color: #7a7a7a;
+    span{
+        height: 20px;
+        width: 20px;
+        background-color: #4aad5b;
+        border-radius: 50%;
+        display: inline-block;
+        margin-right: 0.3rem;
+    };
+};
+.button-edit{
+    display: flex;
+    align-items: center;
+    .edit{
+        padding: 0.9rem 2.5rem 0.9rem 2.5rem;
+        border: 1px solid #e29933;
+        border-radius: 8px;
+        background-color: white;
+        color: #e29933;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: 0.2s;
+    }
+    :hover{
+        background: #e29933;
+        color: white;
+    }
+}
