@@ -1,0 +1,70 @@
+.conteudo {
+    width:50%;
+    margin: 0 auto;
+    margin-top: 5vh;
+}
+.title {
+    display: flex;
+    align-items: center;
+}
+.title img {
+
+    width:28px;
+    padding-right: 14px;
+    padding-left: 14px;
+}
+.title h1 {
+    padding-top:3px;
+    font-weight: 100;
+    color: #333;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+ hr {
+    border: 1px solid #eee;
+}
+.details .main-title {
+    justify-content: space-between;;
+    display: flex;
+}
+.details .description {
+    justify-content: flex-start
+}
+.details .new-user {
+    justify-content: flex-end;
+    padding-top: 24px;
+}
+
+.details h2 {
+    padding-left: 14px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #01011c;
+}
+.details span {
+    padding-left: 14px;
+    font-size: 18px;
+    font-weight: 100;
+    color: #01011c;
+}
+ button.button {
+    background-color: #c99a00;
+    color: #fff;
+
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Helvetica Neue",;
+    cursor: pointer;
+    border: 1px solid #f0b902;
+}
+button.button:hover {
+    background-color: #fff;
+    border-color: #f0b902;
+    color: #f0b902;
+    transition-duration: 0.5s;
+}
+.details .new-user {
+    justify-content: flex-end;
+    padding-top: 24px;
+}

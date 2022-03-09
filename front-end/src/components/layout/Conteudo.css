@@ -1,0 +1,24 @@
+.conteudo {
+    width:50%;
+    margin: 0 auto;
+    margin-top: 5vh;
+}
+.title {
+    display: flex;
+    align-items: center;
+}
+.title img {
+
+    width:28px;
+    padding-right: 14px;
+    padding-left: 14px;
+}
+.title h1 {
+    padding-top:3px;
+    font-weight: 100;
+    color: #333;
+    font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+}
+ hr {
+    border: 1px solid #eee;
+}
