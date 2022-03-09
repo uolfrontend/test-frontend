@@ -1,0 +1,37 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "cpf": "512.536.530-03",
+      "name": "Camila Souza",
+      "email": "camila.souza@email.com",
+      "phone": "(11) 93463-2347",
+      "status": "active"
+    },
+    {
+      "name": "Rodrigo Soares Silverio",
+      "email": "digo.silverio@outlook.com.br",
+      "cpf": "478.874.728-65",
+      "phone": "11953693901",
+      "status": "active",
+      "id": 2
+    },
+    {
+      "name": "Rodrigo Soares Silverio",
+      "email": "digo.silverio@outlook.com.br",
+      "cpf": "44444444545445",
+      "phone": "11953693901",
+      "status": "active",
+      "id": 3
+    },
+    {
+      "name": "Rodrigo Soares Silverio",
+      "email": "digo.silverio@outlook.com.br",
+      "cpf": "478.874.728-65",
+      "phone": "11953693901",
+      "status": "active",
+      "id": 4
+    }
+  
+  ]
+}

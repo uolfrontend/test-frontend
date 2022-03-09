@@ -1,0 +1,122 @@
+.details .main-title {
+    justify-content: space-between;;
+    display: flex;
+}
+.details .description {
+    justify-content: flex-start
+}
+.details .new-user {
+    justify-content: flex-end;
+    padding-top: 24px;
+}
+
+.details h2 {
+    padding-left: 14px;
+    font-size: 22px;
+    font-weight: 500;
+    color: #01011c;
+}
+.details span {
+    padding-left: 14px;
+    font-size: 18px;
+    font-weight: 100;
+    color: #01011c;
+}
+ button.button {
+    background-color: #c99a00;
+    color: #fff;
+
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Helvetica Neue",;
+    cursor: pointer;
+    border: 1px solid #f0b902;
+}
+button.button:hover {
+    background-color: #fff;
+    border-color: #f0b902;
+    color: #f0b902;
+    transition-duration: 0.5s;
+}
+.table {
+    padding-top: 30px;
+    padding-left: 14px;
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border-radius: 5px;
+    padding: 10px;
+    border: 1px solid #ededed;
+  }
+  .wrapper .dados {
+    padding-left: 14px;
+    border-right: 1px solid #eee;
+    flex-direction: column;
+  }
+.wrapper .dados h1 {
+    font-size: 20px;
+    color: #4a4a4a;
+ 
+}
+.wrapper .dados h2 {
+    padding-left: 0px;
+    font-size: 16px;
+    font-weight: 200;
+    color: #4a4a4a;
+}
+.wrapper .ativos .btn-green {
+    width: 13px;
+    height: 13px;
+    background-color: green;
+    border-radius: 50%;
+}
+.wrapper .ativos {
+    padding-left: 14px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    border-right: 1px solid #eee;
+}
+.wrapper .ativos h1 {
+    font-size: 16px;
+    color: #4a4a4a;
+    font-weight: 200;
+    padding-left: 10px;
+}
+.wrapper .edit {
+    padding-left: 14px;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+
+}
+
+.wrapper .edit .btn-edit {
+    background-color: #ffffff;
+    color: #f0b902;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: "Helvetica Neue",;
+    cursor: pointer;
+    border: 1px solid #f0b902;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+.wrapper .edit .btn-edit:hover {
+    background-color: #c99a00;
+    color: #fff;
+    transition-duration: 0.5s;
+
+}
+.number-clientes h1 {
+    padding-left: 14px;
+    display: flex;
+    font-size: 16px;
+    font-weight: 100;
+    color: #ccc
+}
