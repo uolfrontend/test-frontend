@@ -7,61 +7,92 @@
     border: 1px solid #aeadad;
     font-size: 1.3rem;
     margin-bottom: 2rem;
-};
 
-.name-email, .phone-cpf{
-    .bold-text{
-        font-weight: 400;
-        color: #7a7a7a;
+    .name-email, .phone-cpf{
+        .bold-text{
+            font-weight: 400;
+            color: #7a7a7a;
+        };
+        .light-text{
+            font-weight: 300;
+            color: #aeadad;
+        };
     };
-    .light-text{
+    
+    .status-user{
+        display: flex;
+        align-items: center;
+    
         font-weight: 300;
-        color: #aeadad;
+        color: #7a7a7a;
+        span{
+            height: 1.2rem;
+            width: 1.2rem;
+            border-radius: 50%;
+            display: inline-block;
+            margin-right: 0.3rem;
+            margin-bottom: 0.5rem;
+        };
+        .active{
+            background-color: #4aad5b;
+        }
+        .inactive{
+            background-color: #d73341;
+        }
+        .waiting{
+            background-color: #d3a710;
+        }
+        .disabled{
+            background-color: #d2d2d2;
+        }
     };
+    .button-edit{
+        display: flex;
+        align-items: center;
+        .edit{
+            padding: 0.9rem 2.5rem 0.9rem 2.5rem;
+            border: 1px solid #e29933;
+            border-radius: 8px;
+            background-color: white;
+            color: #e29933;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+        :hover{
+            background: #e29933;
+            color: white;
+        }
+    }
+    
 };
 
-.status-user{
-    display: flex;
-    align-items: center;
+@media screen and (max-width:916px){
+    .client-box{
+        font-size:0.9rem;
+        .status-user{
+            span{
+                width:0.8rem;
+                height:0.8rem;
+            }
+        }
+        .button-edit{
+            .edit{
+                padding: 0.5rem 1rem 0.5rem 1rem;
+                font-size: 1rem;
+            }
+        }
+    }
+}
 
-    font-weight: 300;
-    color: #7a7a7a;
-    span{
-        height: 20px;
-        width: 20px;
-        border-radius: 50%;
-        display: inline-block;
-        margin-right: 0.3rem;
-        margin-bottom: 0.5rem;
-    };
-    .active{
-        background-color: #4aad5b;
-    }
-    .inactive{
-        background-color: #d73341;
-    }
-    .waiting{
-        background-color: #d3a710;
-    }
-    .disabled{
-        background-color: #d2d2d2;
-    }
-};
-.button-edit{
-    display: flex;
-    align-items: center;
-    .edit{
-        padding: 0.9rem 2.5rem 0.9rem 2.5rem;
-        border: 1px solid #e29933;
-        border-radius: 8px;
-        background-color: white;
-        color: #e29933;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: 0.2s;
-    }
-    :hover{
-        background: #e29933;
-        color: white;
+@media screen and (max-width:623px){
+    .client-box{
+        font-size: 0.7rem;
+        .button-edit{
+            .edit{
+                padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+                font-size: 0.7rem;
+            }
+        }
     }
 }
