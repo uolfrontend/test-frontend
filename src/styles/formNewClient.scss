@@ -32,7 +32,8 @@
             display: flex;
             justify-content: space-between;
             .create-new-client{
-                padding: 1rem 3.7rem 1rem 3.7rem;
+                padding: 0rem 0.5rem 0rem 0.5rem;
+                width: 10rem;
                 border: 1px solid #e29933;
                 border-radius: 8px;
                 background-color: #e29933;
@@ -41,15 +42,36 @@
                 cursor: pointer;
             }
             .back{
-                padding: 1rem 3.7rem 1rem 3.7rem;
+                padding: 0.8rem 3rem 0.1rem 3rem;
+                height: 3rem;
                 border: 1px solid #e29933;
-                border-radius: 8px;
+                border-radius: 5px;
                 background-color: white;
                 color: #e29933;
                 font-size: 1rem;
                 cursor: pointer;
+                text-decoration: none;
             }
         }
         
+    }
+
+    .head-edit{
+        display:flex;
+        flex-direction:row;
+        justify-content: space-between;
+    
+        margin-bottom: 3rem;
+        font-size: 1.3rem;
+    
+        .head-edit-title{
+            font-weight: 400;
+            color: #7a7a7a;
+        }
+    
+        .head-edit-description{
+            font-weight: 300;
+            color: #aeadad;
+        }
     }
 }

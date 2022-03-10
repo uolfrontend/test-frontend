@@ -1,18 +1,28 @@
-import './styles/app.scss'
+import {BrowserRouter, Routes, Route} from 'react-router-dom'
+import 'bootstrap/dist/css/bootstrap.min.css'
+import './styles/app.scss';
 
 import { Header } from './components/Header';
-import { ClientList } from './components/ClientList';
 import { Nav } from './components/Nav';
-import { FormEdit } from './components/FormEdit';
+import { Home } from './pages/home';
+import { NewClient } from './pages/newClient';
+import { EditModal } from './components/Modal';
 
 function App() {
+  
   return (
-    <div className="App">
-      <Nav/>
-      <Header />
-      {/* <ClientList /> */}
-      <FormEdit />
-    </div>
+    <BrowserRouter>
+      <div className="App">
+        <Nav/>
+        <Header />
+        <Routes>
+          <Route path="/" exact element={<Home/>}/>
+          <Route path="/newclient" element={<NewClient />}/>
+        </Routes>
+        <EditModal/>
+      </div>
+    </BrowserRouter>
+    
   );
 }
 

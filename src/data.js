@@ -1,4 +1,4 @@
-{
+const data = {
     "customers":[
       {
         "id": "512.536.530-03",
@@ -30,3 +30,5 @@
       }
     ]
   }
+
+  export default data

@@ -6,6 +6,7 @@
     padding: 1.5rem;
     border: 1px solid #aeadad;
     font-size: 1.3rem;
+    margin-bottom: 2rem;
 };
 
 .name-email, .phone-cpf{
@@ -28,11 +29,23 @@
     span{
         height: 20px;
         width: 20px;
-        background-color: #4aad5b;
         border-radius: 50%;
         display: inline-block;
         margin-right: 0.3rem;
+        margin-bottom: 0.5rem;
     };
+    .active{
+        background-color: #4aad5b;
+    }
+    .inactive{
+        background-color: #d73341;
+    }
+    .waiting{
+        background-color: #d3a710;
+    }
+    .disabled{
+        background-color: #d2d2d2;
+    }
 };
 .button-edit{
     display: flex;
