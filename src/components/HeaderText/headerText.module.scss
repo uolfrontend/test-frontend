@@ -1,0 +1,25 @@
+.headerTextComponents {
+    width: 100%;
+    max-width: 1320px;
+    margin: auto;
+    margin-top: 100px;
+
+    div {
+        display: flex;
+        align-items: center;
+        width: 280px;
+        justify-content: space-between;
+        margin-bottom: 30px;
+
+        svg {
+            font-size: 46px;
+        }
+
+        h1 {
+            font-weight: 400;
+            font-size: 25px;
+            color: #0E0E0E;
+        }
+    }
+
+}

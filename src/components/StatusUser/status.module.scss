@@ -1,0 +1,38 @@
+.divStatusUser {
+    display: flex;
+    align-items: center;
+
+
+    p {
+        margin-left: 6px;
+        color: #a2a3a0;
+    }
+
+    .statusAtivo {
+        background-color: green;
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+    }
+
+    .statusInativo {
+        background-color: red;
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+    }
+
+    .statusAguardando {
+        background-color: #FF8000;
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+    }
+
+    .statusDesativo {
+        background-color: rgb(92, 92, 92);
+        width: 14px;
+        height: 14px;
+        border-radius: 100%;
+    }
+}

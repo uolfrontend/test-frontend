@@ -1,32 +1,37 @@
-# Teste front-end - UOL Produtos Digitais
+<h1 align="center">
+Teste front-end - UOL Produtos Digitais
+</h1>
 
-### O Desafio
+<p align="center"> Teste feito para a vaga de desenvolvedor Front-end </p>
 
-A aplicação deve mostrar primeiramente uma listagem de clientes com todas informações conforme o layout. Segundo, deve permitir a criação de novo cliente.
+<hr>
 
-### Começando
+## Visualização do projeto
 
-Utilize o seguinte [endpoint](https://test-frontend-uolpp.web.app/customers.json) para o carregamento inicial da listagem de clientes.
+ Deploy feito na Vercel para testar a aplicação. 
+ Para visualizar o projeto em "produção" ("")
 
-### Itens obrigatórios
 
-- Alertas para o usuário na tela de edição
-- Validação de CPF na tela de edição
-- Validação de telefone na tela de edição
-- Utilizar o *localStorage/IndexedDB* para persistir localmente as informações
-- Código limpo e organizado
-- Responsividade
+## Tecnologias Utilizadas
 
-### Itens desejáveis
+- [X] [TypeScript](https://www.typescriptlang.org/)
+- [X] [Next.Js](https://nextjs.org/)
+- [X] [Sass](https://sass-lang.com/)
 
-- Testes unitários
-- React
+### Pré-requisitos
 
-### Telas
+Antes de começar, você vai precisar ter instalado em sua máquina a seguinte ferramenta:
+[Git](https://git-scm.com).<br>
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
 
-- [Tela inicial](https://test-frontend-uolpp.web.app/assets/images/tela-inicial.jpg)
-- [Tela de edição](https://test-frontend-uolpp.web.app/assets/images/tela-edicao.jpg)
+### Executando o projeto
 
-### Finalizando
+```bash
+# Instale as dependências
+$ yarn
 
-Ao finalizar seu teste nos envie um **pull request**.
+# Inicie a aplicação
+$ yarn dev
+
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+```
