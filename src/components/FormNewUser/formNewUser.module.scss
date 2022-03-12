@@ -1,0 +1,150 @@
+.divFormNewUser {
+    width: 100%;
+    max-width: 1320px;
+    margin: auto;
+    margin-top: 40px;
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        input {
+            height: 40px;
+            width: 250px;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+
+            border: 1px solid #a2a3a0;
+
+        }
+
+        select {
+            height: 40px;
+            width: 250px;
+            padding: 10px;
+            border: 1px solid #a2a3a0;
+            border-radius: 5px;
+
+        }
+    }
+
+    div {
+        width: 280px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+
+    }
+
+}
+
+
+.errorMensage {
+    width: 100%;
+    max-width: 1320px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    margin-bottom: 10px;
+
+    div {
+        height: 50px;
+        width: 190px;
+        background-color: #e53e3e;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        border-radius: 5px;
+
+
+        span {
+            width: 147px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .divFormNewUser {
+        width: 100%;
+        max-width: 380px;
+        margin: auto;
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+
+        form {
+            display: flex;
+            flex-direction: column;
+
+            input {
+                height: 40px;
+                width: 250px;
+                padding: 10px;
+                margin-bottom: 20px;
+                border-radius: 5px;
+
+                border: 1px solid #a2a3a0;
+
+            }
+
+            select {
+                height: 40px;
+                width: 250px;
+                padding: 10px;
+                border: 1px solid #a2a3a0;
+                border-radius: 5px;
+
+            }
+        }
+
+        div {
+            width: 280px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+
+        }
+
+
+    }
+
+    .divError {
+        margin-top: -750px;
+
+        .errorMensage {
+            width: 100%;
+            max-width: 1320px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            margin-bottom: 10px;
+
+            div {
+                height: 50px;
+                width: 190px;
+                background-color: #e53e3e;
+                color: #fff;
+                display: flex;
+                justify-content: center;
+                border-radius: 5px;
+
+
+                span {
+                    width: 147px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                }
+            }
+        }
+    }
+
+
+}
