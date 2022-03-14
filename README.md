@@ -1,32 +1,25 @@
-# Teste front-end - UOL Produtos Digitais
+# App CRUD | Usuários UOL
 
-### O Desafio
+Criação e edição de usuários com validação de entradas.
 
-A aplicação deve mostrar primeiramente uma listagem de clientes com todas informações conforme o layout. Segundo, deve permitir a criação de novo cliente.
+## Tecnologias Utilizadas
 
-### Começando
+☑️ ReactJS (componentização e hooks)
+☑️ Vite Bundler
+☑️ Material UI
+☑️ Bootstrap
 
-Utilize o seguinte [endpoint](https://test-frontend-uolpp.web.app/customers.json) para o carregamento inicial da listagem de clientes.
+# Realizações
 
-### Itens obrigatórios
+☑️ Alertas para o usuário na tela de edição conforme validações
+☑️ Validação de CPF na tela de edição (REGEX)
+☑️ Validação de telefone na tela de edição (REGEX)
+☑️ Utilizar o _localStorage/IndexedDB_ para persistir localmente as informações
+☑️ Código limpo e organizado
+☑️ Responsividade
 
-- Alertas para o usuário na tela de edição
-- Validação de CPF na tela de edição
-- Validação de telefone na tela de edição
-- Utilizar o *localStorage/IndexedDB* para persistir localmente as informações
-- Código limpo e organizado
-- Responsividade
+### Próximas Implementações
 
-### Itens desejáveis
-
-- Testes unitários
-- React
-
-### Telas
-
-- [Tela inicial](https://test-frontend-uolpp.web.app/assets/images/tela-inicial.jpg)
-- [Tela de edição](https://test-frontend-uolpp.web.app/assets/images/tela-edicao.jpg)
-
-### Finalizando
-
-Ao finalizar seu teste nos envie um **pull request**.
+- Testes Unitários
+- Estilização de Botões em SASS
+- Inclusão de Badges em cores para o Status do usuário
