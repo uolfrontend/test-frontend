@@ -4,13 +4,6 @@ import UsersContext from '../../context/UsersContext'
 
 function AddUser() {
 
-    const [nameError, setNameError] = useState('')
-    const [emailError, setEmailError] = useState('')
-    const [idError, setIdError] = useState('')
-    const [phoneError, setPhoneError] = useState('')
-    const [statusError, setStatusError] = useState('')
-
-
     useEffect(() => {
         console.log('Component Mounted')
         // Limpeza - cleanup
@@ -36,6 +29,12 @@ function AddUser() {
     }
 
     const { name, email, id, phone, status } = newUser
+
+    const [nameError, setNameError] = useState('')
+    const [emailError, setEmailError] = useState('')
+    const [idError, setIdError] = useState('')
+    const [phoneError, setPhoneError] = useState('')
+    const [statusError, setStatusError] = useState('')
 
     //VALIDAÇÕES 
     const validateID = (id) => {
@@ -131,7 +130,6 @@ function AddUser() {
     const handleSubmit = (e) => {
         e.preventDefault()
         const isValid = validate(newUser)
-
         if (isValid) {
             console.log('Validação Realizada!')
             createUser(newUser)
@@ -141,7 +139,6 @@ function AddUser() {
     }
 
     return (
-
 
         <Form onSubmit={handleSubmit} className='p-4'>
             <Form.Group className={mTop}>

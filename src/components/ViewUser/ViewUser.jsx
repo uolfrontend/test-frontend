@@ -1,53 +1,67 @@
 import { useContext, useState } from 'react'
 import UsersContext from '../../context/UsersContext'
-import { Modal } from "react-bootstrap";
+import { Modal, Button } from "react-bootstrap";
 import EditUser from '../AddUser/EditUser'
+import { FiberManualRecord } from '@mui/icons-material/';
 
 
 function ViewUser({ user }) {
 
-    const { userData, deleteUser, updateUser } = useContext(UsersContext)
-
-    const [show, setShow] = useState(false)
-
-    const handleShow = () => setShow(true)
-    const handleClose = () => setShow(false)
-
-    const handleDelete = () => {
-        console.log('oiiiiii')
-        deleteUser(user.id)
-    }
-
-    const handleUpdate = () => {
-        console.log('oiiiiii')
-        updateUser(user.id)
-    }
-
-
-
+    // SHOW EDIT MODAL
+    const [showEditModal, setShowEditModal] = useState(false)
+    const handleShowModal = () => setShowEditModal(true)
+    const handleCloseModal = () => setShowEditModal(false)
 
     return (
         <>
-            <div className="linha">
-                <div className='celula'>
-                    <strong>
-                        {user.name}
-                    </strong>
-                    <br></br>{user.email}</div>
-                <div className='celula'>
-                    <strong>
-                        {user.id}
-                    </strong>
-                    <br></br>{user.phone}</div>
-                <div className='celula'>{user.status}</div>
-                <div className='celula'>
-                    <button onClick={handleShow} className="btn btn-warning  editarBtn py-3 px-5" id="editar" data-toggle="modal">Editar</button> <br></br>
-                </div>
-            </div>
+            <td className='celula'>
+                <strong>
+                    {user.name}
+                </strong>
+                <br></br>{user.email}</td>
+            <td className='celula'>
+                <strong>
+                    {user.id}
+                </strong>
+                <br></br>{user.phone}</td>
+            <td className='celula'>
 
+                {user.status === 'Ativo' && (
+                    <FiberManualRecord className='text-success' />
+                )}
+                {user.status === 'active' && (
+                    <FiberManualRecord className='text-success' />
+                )}
 
+                {user.status === 'Aguardando ativação' && (
+                    <FiberManualRecord className='text-warning' />
+                )}
 
-            <Modal show={show} onHide={handleClose}>
+                {user.status === 'waiting' && (
+                    <FiberManualRecord className='text-warning' />
+                )}
+
+                {user.status === 'Inativo' && (
+                    <FiberManualRecord className='text-danger' />
+                )}
+                {user.status === 'inactive' && (
+                    <FiberManualRecord className='text-danger' />
+                )}
+
+                {user.status === 'Desativado' && (
+                    <FiberManualRecord className='text-secondary' />
+                )}
+                {user.status === 'disabled' && (
+                    <FiberManualRecord className='text-secondary' />
+                )}
+
+                {user.status}</td>
+
+            <td className='celula'>
+                <Button onClick={handleShowModal} className="btn btn-warning editarBtn py-3 px-5" id="editar" data-toggle="modal">Editar</Button> <br></br>
+            </td>
+
+            <Modal show={showEditModal} onHide={handleCloseModal}>
                 <Modal.Header closeButton>
                     <Modal.Title className="px-4 py-2">
                         Editar Usuário
@@ -58,7 +72,6 @@ function ViewUser({ user }) {
 
                     </EditUser>
                 </Modal.Body>
-
             </Modal>
         </>
     )

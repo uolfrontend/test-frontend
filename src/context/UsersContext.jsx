@@ -13,15 +13,6 @@ export const UsersProvider = ({ children }) => {
         { id: 53327887039, name: 'Carlos Ferraz', email: 'carlosferraz@email.com', phone: '(11) 96744-0233', status: 'disabled' }
     ])
 
-    useEffect(() => {
-        setUserData(JSON.parse(localStorage.getItem('userData')))
-    }, [])
-
-    useEffect(() => {
-        localStorage.setItem('userData', JSON.stringify(userData))
-    })
-
-
     const [newUserData, setNewUserData] = useState([
         {
             id: '',
@@ -32,6 +23,13 @@ export const UsersProvider = ({ children }) => {
         }
     ])
 
+    useEffect(() => {
+        setUserData(JSON.parse(localStorage.getItem('userData')))
+    }, [])
+
+    useEffect(() => {
+        localStorage.setItem('userData', JSON.stringify(userData))
+    })
 
     // CREATE FUNCTION
     const createUser = (newUser) => {
@@ -52,6 +50,20 @@ export const UsersProvider = ({ children }) => {
         )
     }
 
+    // SHOW EDIT MODAL
+    const [showEditModal, setShowEditModal] = useState(false)
+    const handleShowModal = () => setShowEditModal(true)
+    const handleCloseModal = () => setShowEditModal(false)
+
+    // SHOW CONFIRM DELETE MODAL
+    const [showConfirmModal, setShowConfirmModal] = useState(false)
+    const handleShowConfirm = () => setShowConfirmModal(true)
+    const handleCloseConfirm = () => setShowConfirmModal(false)
+
+    // CONFIRM DELETE USER
+    const [confirmDeleteUser, handleConfirmDeleteUser] = useState(false)
+    const confirmDelete = () => handleConfirmDeleteUser(true)
+
     return <UsersContext.Provider value={{
         userData,
         setUserData,
@@ -59,7 +71,18 @@ export const UsersProvider = ({ children }) => {
         setNewUserData,
         createUser,
         deleteUser,
-        updateUser
+        updateUser,
+        showEditModal,
+        setShowEditModal,
+        handleShowModal,
+        handleCloseModal,
+        showConfirmModal,
+        setShowConfirmModal,
+        handleShowConfirm,
+        handleCloseConfirm,
+        confirmDeleteUser,
+        handleConfirmDeleteUser,
+        confirmDelete,
     }}>
         {children}
     </UsersContext.Provider >

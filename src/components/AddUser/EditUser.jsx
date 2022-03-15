@@ -1,6 +1,7 @@
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Modal } from 'react-bootstrap'
 import { useContext, useState, useEffect } from 'react'
 import UsersContext from '../../context/UsersContext'
+import ConfirmDeleteUser from '../ConfirmDeleteUser/ConfirmDeleteUser'
 
 function EditUser({ userOnEditing }) {
 
@@ -18,17 +19,12 @@ function EditUser({ userOnEditing }) {
     const [phoneError, setPhoneError] = useState('')
     const [statusError, setStatusError] = useState('')
 
-    const { updateUser } = useContext(UsersContext)
+    const { updateUser, showConfirmModal, handleShowConfirm, handleCloseConfirm, handleCloseModal } = useContext(UsersContext)
+
     const updatedUser = { name, email, id, phone, status }
 
-    const [show, setShow] = useState(false)
-
-    const handleShow = () => setShow(true)
-    const handleClose = () => setShow(false)
-
     useEffect(() => {
-        handleClose()
-        console.log('oiiiiiiii')
+        console.log('User Changed')
     }, [userOnEditing])
 
     //VALIDAÇÕES 
@@ -120,7 +116,7 @@ function EditUser({ userOnEditing }) {
         }
     }
 
-    const handleSubmit = (e) => {
+    const handleUpdate = (e) => {
         e.preventDefault()
         setNameError('')
         setEmailError('')
@@ -131,6 +127,7 @@ function EditUser({ userOnEditing }) {
         if (isValid) {
             console.log('Validação Realizada!')
             updateUser(originalId, updatedUser)
+            handleCloseModal()
         } else {
             console.log('Edição não foi validada')
         }
@@ -139,85 +136,104 @@ function EditUser({ userOnEditing }) {
     const mTop = 'mb-2'
 
     return (
-        <Form onSubmit={handleSubmit} className='px-4'>
-            <Form.Label className='formLabel'>Nome</Form.Label>
-            <Form.Group className={mTop}>
-                <Form.Control
-                    type="text"
-                    placeholder="Nome"
-                    name='name'
-                    value={name}
-                    onChange={(e) => setName(e.target.value)}
-                    required
+        <>
+            <div>
+                <Form onSubmit={handleUpdate} className='px-4'>
+                    <Form.Label className='formLabel'>Nome</Form.Label>
+                    <Form.Group className={mTop}>
+                        <Form.Control
+                            type="text"
+                            placeholder="Nome"
+                            name='name'
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            required
+                        />
+                    </Form.Group>
+                    <div className='errorMessage'>{nameError}</div>
 
-                />
-            </Form.Group>
-            <div className='errorMessage'>{nameError}</div>
+                    <Form.Label className='formLabel'>E-mail</Form.Label>
+                    <Form.Group className={mTop}>
+                        <Form.Control
+                            type="text"
+                            placeholder="E-mail"
+                            name='email'
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            required
+                        />
+                    </Form.Group>
+                    <div className='errorMessage'>{emailError}</div>
 
-            <Form.Label className='formLabel'>E-mail</Form.Label>
-            <Form.Group className={mTop}>
-                <Form.Control
-                    type="text"
-                    placeholder="E-mail"
-                    name='email'
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                />
-            </Form.Group>
-            <div className='errorMessage'>{emailError}</div>
+                    <Form.Label className='formLabel'>CPF</Form.Label>
+                    <Form.Group className={mTop}>
+                        <Form.Control
+                            type="text"
+                            placeholder="CPF"
+                            name='id'
+                            value={id}
+                            onChange={(e) => setNewId(e.target.value)}
+                            required
+                        />
+                    </Form.Group>
+                    <div className='errorMessage'>{idError}</div>
 
-            <Form.Label className='formLabel'>CPF</Form.Label>
-            <Form.Group className={mTop}>
-                <Form.Control
-                    type="text"
-                    placeholder="CPF"
-                    name='id'
-                    value={id}
-                    onChange={(e) => setNewId(e.target.value)}
-                    required
-                />
-            </Form.Group>
-            <div className='errorMessage'>{idError}</div>
+                    <Form.Label className='formLabel'>Fone</Form.Label>
+                    <Form.Group className={mTop}>
+                        <Form.Control
+                            type="text"
+                            placeholder="Fone"
+                            name='phone'
+                            value={phone}
+                            onChange={(e) => setPhone(e.target.value)}
+                            required
+                        />
+                    </Form.Group>
+                    <div className='errorMessage'>{phoneError}</div>
 
-            <Form.Label className='formLabel'>Fone</Form.Label>
-            <Form.Group className={mTop}>
-                <Form.Control
-                    type="text"
-                    placeholder="Fone"
-                    name='phone'
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)}
-                    required
-                />
-            </Form.Group>
-            <div className='errorMessage'>{phoneError}</div>
+                    <Form.Label className='formLabel'>Status</Form.Label>
+                    <Form.Group className={mTop}>
+                        <Form.Select
+                            type="text"
+                            placeholder="Status"
+                            name='status'
+                            value={status}
+                            onChange={(e) => setStatus(e.target.value)}
+                            required
+                        >
+                            <option value="" disabled defaultValue hidden>Status</option>
+                            <option value="Ativo">Ativo</option>
+                            <option value="Inativo">Inativo</option>
+                            <option value="Aguardando ativação">Aguardando ativação</option>
+                            <option value="Desativado">Desativado</option>
+                        </Form.Select>
+                    </Form.Group>
+                    <div className='errorMessage'>{statusError}</div>
 
-            <Form.Label className='formLabel'>Status</Form.Label>
-            <Form.Group className={mTop}>
-                <Form.Select
-                    type="text"
-                    placeholder="Status"
-                    name='status'
-                    value={status}
-                    onChange={(e) => setStatus(e.target.value)}
-                    required
-                >
-                    <option value="" disabled selected hidden>Status</option>
-                    <option value="Ativo">Ativo</option>
-                    <option value="Inativo">Inativo</option>
-                    <option value="Aguardando ativação">Aguardando ativação</option>
-                    <option value="Desativado">Desativado</option>
-                </Form.Select>
-            </Form.Group>
-            <div className='errorMessage'>{statusError}</div>
-
-            <div className={mTop}>
-                <Button className='my-4 px-4' variant="success" type="submit" block>
-                    Salvar
-                </Button>
+                    <div className="mb-2 d-flex justify-content-between">
+                        <Button className='my-4 px-4 font-weight-bold btn-dark' variant="success" type="submit" block>
+                            Salvar
+                        </Button>
+                        <Button onClick={handleShowConfirm} className='my-4 px-4 btn-warning font-weight-bold' variant="success" type="button" block>
+                            Excluir
+                        </Button>
+                    </div>
+                </Form >
             </div>
-        </Form >
+
+            {/* MODAL CONFIRM */}
+            <Modal show={showConfirmModal} onHide={handleCloseConfirm}>
+                <Modal.Header closeButton>
+                    <Modal.Title className="px-4 py-2">
+                        Confirma a exclusão?
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    <ConfirmDeleteUser userOnEditing={userOnEditing}>
+                    </ConfirmDeleteUser>
+                </Modal.Body>
+            </Modal>
+        </>
     )
 }
 

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import './App.css'
 import UsersList from './components/ViewUser/UsersList'
 import { UsersProvider } from './context/UsersContext'
@@ -6,7 +5,6 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <UsersProvider>
