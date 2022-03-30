@@ -1,0 +1,13 @@
+p {
+  margin-bottom: 0 !important;
+}
+
+.btn-ouline-warning {
+  color: #ffa707;
+  border-width: 0.12rem;
+}
+
+.btn-outline-warning:hover {
+  color: #ffffff;
+  background-color: #ffa707;
+}
