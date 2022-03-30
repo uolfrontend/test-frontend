@@ -1,0 +1,60 @@
+#client-list {
+  width: 100%;
+  max-width: 1240px;
+  height: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.card-list {
+  margin-top: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+div.card-info {
+  width: 100%;
+  text-align: left;
+  padding: 1rem;
+}
+
+div.client-status {
+  width: 100%;
+  text-align: left;
+}
+
+div.card-options {
+  width: 100%;
+  text-align: right;
+  padding: 2rem;
+}
+
+div.card-options > .btn {
+  padding: 0.9rem 3rem;
+}
+
+@media (max-width: 750px) {
+  .card-list {
+    margin-top: 100px;
+  }
+
+  div.client-status {
+    padding: 0 1rem;
+    text-align: left;
+  }
+  div.card-options {
+    display: flex;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  .btn {
+    width: 100%;
+  }
+}

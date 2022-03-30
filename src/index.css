@@ -1,0 +1,109 @@
+:root {
+  font-size: 60%;
+
+  --color-background: var(--color-box-base);
+  --color-primary: #333333;
+  --color-shadow: rgb(151, 151, 151);
+
+  --color-secondary: #e29933;
+
+  --color-title-in-primary: #ffffff;
+  --color-text-in-primary: #fafafc;
+
+  --color-text-title: #a37041;
+  --color-text-base: #333333;
+  --color-line-in-white: #e6e6f0;
+  --color-input-background: #f8f8fc;
+  --color-button-text: #ffffff;
+  --color-box-base: #ffffff;
+  --color-box-footer: #fafafc;
+  --color-text-error: #ff6347;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+
+html,
+body,
+#root {
+  height: 100vh;
+}
+
+body {
+  background-color: var(--color-background);
+}
+
+#root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+body,
+input,
+button,
+textarea,
+select {
+  font: 500 1.6rem Poppins;
+  color: var(--color-text-base);
+}
+
+input,
+select {
+  width: 100%;
+  height: 4rem;
+  padding: 1rem;
+  margin: 0.5rem 0;
+  border-radius: 0.5rem;
+  border: 1px solid lightgray;
+  background-color: var(--color-input-background);
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-text-in-primary);
+}
+
+.btn {
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  border: none;
+  background-color: var(--color-secondary);
+  color: var(--color-button-text);
+}
+
+.btn.btn-outline {
+  background-color: var(--color-box-base);
+  color: var(--color-secondary);
+  border: 1px solid var(--color-secondary);
+}
+
+.btn.btn-outline:hover {
+  background-color: var(--color-secondary);
+  color: var(--color-text-in-primary);
+}
+
+.container {
+  width: 90vw;
+  max-width: 700px;
+}
+
+.error-message {
+  padding: 0 1rem;
+  color: var(--color-text-error);
+  font-weight: bold;
+  text-align: left;
+  font-size: 1rem;
+}
+
+@media (min-width: 700px) {
+  :root {
+    font-weight: normal;
+    font-size: 62, 5%;
+    color: var(--color-text-base);
+  }
+}
