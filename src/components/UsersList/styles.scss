@@ -1,0 +1,65 @@
+.user-info-card {
+  border: 1px solid #e3e3e3e0;
+  padding: 1.3rem 2.2rem;
+  margin: 2rem 0;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  p {
+    display: inline-block;
+    margin-bottom: 0;
+    color: #686262e8;
+  }
+  p:first-child {
+    font-weight: 500;
+  }
+  p:first-child + p {
+    font-weight: 300;
+  }
+}
+
+.user-status {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+
+  span {
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.5rem;
+    transform: translateY(1px);
+  }
+
+  p {
+    font-size: 1.2rem !important;
+  }
+
+  .active {
+    background-color: #4aad5b;
+  }
+  .inactive {
+    background-color: #d73341;
+  }
+  .waiting {
+    background-color: #d3a710;
+  }
+  .disabled {
+    background-color: #d2d2d2;
+  }
+}
+
+.user-edit {
+  button {
+    display: block;
+    font-size: 20px;
+    margin-left: auto;
+    padding: 0.4rem 2.5rem;
+  }
+}
