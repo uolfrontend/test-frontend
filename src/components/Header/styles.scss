@@ -1,0 +1,18 @@
+#header {
+  display: flex;
+  flex-direction: row;
+  margin-top: 4rem;
+  align-items: center;
+  font-size: 2rem;
+  border-bottom: 1px solid #e1d4d499;
+  padding-bottom: 1.5rem;
+
+  p {
+    margin-left: 1.2rem;
+    color: #444648e8;
+    letter-spacing: -1px;
+    font-weight: 500;
+    font-size: 1.7rem;
+    transform: translateY(-2px);
+  }
+}

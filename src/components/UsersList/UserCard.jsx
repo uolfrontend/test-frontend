@@ -1,7 +1,8 @@
 import { Col, Row, Button } from 'react-bootstrap';
+
 import './styles.scss';
 
-const UserCard = ({ id, name, email, phone, status }) => {
+const UserCard = ({ id, name, email, phone, status, statusTranslated }) => {
   return (
     <div className="user-info-card">
       <Row>
@@ -20,7 +21,7 @@ const UserCard = ({ id, name, email, phone, status }) => {
         <Col md={3}>
           <div className="user-status">
             <span className={status}></span>
-            <p>Ativo</p>
+            <p>{statusTranslated}</p>
           </div>
         </Col>
         <Col md={2}>

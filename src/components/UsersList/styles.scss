@@ -42,16 +42,16 @@
   }
 
   .active {
-    background-color: #4aad5b;
+    background-color: #43a954;
   }
   .inactive {
-    background-color: #d73341;
+    background-color: #d72433;
   }
   .waiting {
-    background-color: #d3a710;
+    background-color: #d3a342;
   }
   .disabled {
-    background-color: #d2d2d2;
+    background-color: rgba(201, 199, 199, 0.867);
   }
 }
 
@@ -61,5 +61,27 @@
     font-size: 20px;
     margin-left: auto;
     padding: 0.4rem 2.5rem;
+  }
+}
+
+#users-list-header {
+  button {
+    display: block;
+    margin-left: auto;
+  }
+
+  p:first-child {
+    color: #565252e8;
+    font-weight: 500;
+    margin-bottom: 0.5rem !important;
+  }
+  p:first-child + p {
+    font-weight: 100;
+  }
+}
+
+#users-list-footer {
+  p {
+    font-weight: 100;
   }
 }
