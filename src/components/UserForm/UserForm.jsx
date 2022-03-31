@@ -1,10 +1,11 @@
 import { useContext } from 'react';
 import { useForm } from 'react-hook-form';
-import { Button, Form } from 'react-bootstrap';
+import { Button, Form, TabPane } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import Select from 'react-select';
 import InputMask from 'react-input-mask';
 import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -27,11 +28,11 @@ const UserForm = () => {
 
   const onSubmitHandler = (data) => {
     if (createUser(data)) {
+      toast.success('Usuário criado com sucesso!');
       navigate('/');
+      reset();
     }
-    reset();
   };
-
   return (
     <div className="mt-5" id="create-user">
       <Form onSubmit={handleSubmit(onSubmitHandler)}>
@@ -45,7 +46,7 @@ const UserForm = () => {
               setValue('name', e.target.value);
             }}
           />
-          <div className="invalid-feedback">{errors.name?.message}</div>
+          <div className="invalid-feedback">{errors.id?.message}</div>
         </Form.Group>
         <Form.Group className="mb-3">
           <InputMask

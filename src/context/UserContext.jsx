@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 
 import * as yup from 'yup';
 
@@ -74,6 +75,10 @@ export const UserProvider = ({ children }) => {
       phone: data.phone,
       status: data.status
     };
+    if (users.findIndex((x) => x.id == userData.id) !== -1) {
+      toast.warn('Usuário com CPF já existente!');
+      return false;
+    }
     users.push(userData);
     localStorage.setItem('users', JSON.stringify(users));
     setReload(true);
