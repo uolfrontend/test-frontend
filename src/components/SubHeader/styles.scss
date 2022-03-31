@@ -1,0 +1,15 @@
+#sub-header {
+  button {
+    display: block;
+    margin-left: auto;
+  }
+
+  p:first-child {
+    color: #565252e8;
+    font-weight: 500;
+    margin-bottom: 0.5rem !important;
+  }
+  p:first-child + p {
+    font-weight: 100;
+  }
+}

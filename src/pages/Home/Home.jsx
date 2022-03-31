@@ -1,7 +1,7 @@
 import { Container } from 'react-bootstrap';
 
-import UsersList from '../UsersList/UsersList';
-import Header from '../Header/Header';
+import UsersList from '../../components/UsersList/UsersList';
+import Header from '../../components/Header/Header';
 
 const Home = () => {
   return (
