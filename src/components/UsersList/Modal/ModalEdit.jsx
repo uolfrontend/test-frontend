@@ -2,8 +2,8 @@ import { useContext, useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Modal, Button, Form } from 'react-bootstrap';
 import Select from 'react-select';
+import InputMask from 'react-input-mask';
 
-import * as yup from 'yup';
 import { yupResolver } from '@hookform/resolvers/yup';
 
 import { UserContext } from '../../../context/UserContext';
@@ -21,14 +21,15 @@ const ModalEdit = () => {
   } = useForm({
     resolver: yupResolver(schema)
   });
+
+  useEffect(() => {
+    reset();
+  }, [userStatus]);
+
   const onSubmitHandler = (data) => {
     console.log({ data });
     reset();
   };
-
-  useEffect(() => {
-    reset();
-  }, [user]);
 
   return (
     <div>
@@ -40,16 +41,30 @@ const ModalEdit = () => {
           <Modal.Body>
             <Form.Group className="mb-3">
               <Form.Label>ID (Documento)</Form.Label>
-              <Form.Control type="text" placeholder="XXX.XXX.XXX-XX" value={user.id} />
+              <InputMask
+                className="default-input"
+                type="text"
+                placeholder="XXX.XXX.XXX-XX"
+                mask={'999.999.999-99'}
+                {...register('id')}
+                value={user.id}
+              />
               <p>{errors.id?.message}</p>
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Nome</Form.Label>
-              <Form.Control {...register('name')} type="text" placeholder="..." value={user.name} />
+              <InputMask
+                className="default-input"
+                {...register('name')}
+                type="text"
+                placeholder="..."
+                value={user.name}
+              />
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Email</Form.Label>
-              <Form.Control
+              <InputMask
+                className="default-input"
                 {...register('email')}
                 type="email"
                 placeholder="xxx@xxx.xxx"
@@ -59,10 +74,12 @@ const ModalEdit = () => {
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Telefone</Form.Label>
-              <Form.Control
+              <InputMask
+                className="default-input"
                 {...register('phone')}
                 type="text"
                 placeholder="(XX) 9XXXX-XXXX"
+                mask={'(99) 99999-9999'}
                 value={user.phone}
               />
               <p>{errors.phone?.message}</p>
