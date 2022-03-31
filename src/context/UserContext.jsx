@@ -103,7 +103,7 @@ export const UserProvider = ({ children }) => {
       .required('CPF é necessário.')
       .matches(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/, 'O CPF não é válido!'),
     name: yup.string().required('Nome é necessário.'),
-    email: yup.string().email().required('E-mail é necessário.'),
+    email: yup.string().email('O e-mail não é válido!').required('E-mail é necessário.'),
     phone: yup
       .string()
       .matches(/^\([0-9]{2}\) [0-9]?[0-9]{4}-[0-9]{4}$/, 'Telefone não é válido!')
