@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 
+import * as yup from 'yup';
+
 import userList from '../database/users';
 
 export const UserContext = React.createContext();
@@ -54,6 +56,20 @@ export const UserProvider = ({ children }) => {
     value: user.status
   });
 
+  const schema = yup.object().shape({
+    id: yup
+      .string()
+      .required()
+      .matches(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/, 'Document is not valid!'),
+    name: yup.string().required(),
+    email: yup.string().email().required(),
+    phone: yup
+      .string()
+      .matches(/^\([0-9]{2}\) [0-9]?[0-9]{4}-[0-9]{4}$/, 'Phone is not valid!')
+      .required(),
+    status: yup.string().required()
+  });
+
   return (
     <UserContext.Provider
       value={{
@@ -66,7 +82,8 @@ export const UserProvider = ({ children }) => {
         usersStatus,
         translateStatus,
         userStatus,
-        setUserStatus
+        setUserStatus,
+        schema
       }}>
       {children}
     </UserContext.Provider>
