@@ -3,6 +3,7 @@ import { useForm } from 'react-hook-form';
 import { Modal, Button, Form } from 'react-bootstrap';
 import Select from 'react-select';
 import InputMask from 'react-input-mask';
+import { toast } from 'react-toastify';
 
 import { yupResolver } from '@hookform/resolvers/yup';
 
@@ -50,6 +51,7 @@ const ModalEdit = () => {
   const onSubmitHandler = (data) => {
     editUser(data);
     reset();
+    toast.success('Usuário editado com sucesso!');
   };
 
   return (
