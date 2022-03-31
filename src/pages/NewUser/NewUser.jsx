@@ -1,11 +1,10 @@
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
 
-import UsersList from '../../components/UsersList/UsersList';
 import Header from '../../components/Header/Header';
 import SubHeader from '../../components/SubHeader/SubHeader';
+import UserForm from '../../components/UserForm/UserForm';
 
-const Home = () => {
+const NewUser = () => {
   return (
     <div>
       <Container>
@@ -14,21 +13,16 @@ const Home = () => {
           <Row className="align-items-center">
             <Col md={9}>
               <div>
-                <p>Listagem de usuários</p>
-                <p>Escolha um cliente para visualizar os detalhes</p>
+                <p>Novo usuário</p>
+                <p>Informe os campos a seguir para criar novo usuário:</p>
               </div>
-            </Col>
-            <Col md={3} className="create-user-btn">
-              <Link to="/new-user">
-                <Button variant="warning">Novo Cliente</Button>
-              </Link>
             </Col>
           </Row>
         </SubHeader>
-        <UsersList />
+        <UserForm />
       </Container>
     </div>
   );
 };
 
-export default Home;
+export default NewUser;

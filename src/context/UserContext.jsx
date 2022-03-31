@@ -66,6 +66,20 @@ export const UserProvider = ({ children }) => {
     return true;
   };
 
+  const createUser = (data) => {
+    let userData = {
+      id: data.id,
+      name: data.name,
+      email: data.email,
+      phone: data.phone,
+      status: data.status
+    };
+    users.push(userData);
+    localStorage.setItem('users', JSON.stringify(users));
+    setReload(true);
+    return true;
+  };
+
   useEffect(() => {
     setUserStatus({
       label: translateStatus(user.status),
@@ -112,7 +126,8 @@ export const UserProvider = ({ children }) => {
         setUserEmail,
         userPhone,
         setUserPhone,
-        editUser
+        editUser,
+        createUser
       }}>
       {children}
     </UserContext.Provider>
