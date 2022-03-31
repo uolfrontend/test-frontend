@@ -33,6 +33,9 @@ const UserForm = () => {
       reset();
     }
   };
+
+  console.log(errors, errors.id?.message);
+
   return (
     <div className="mt-5" id="create-user">
       <Form onSubmit={handleSubmit(onSubmitHandler)}>
@@ -46,7 +49,7 @@ const UserForm = () => {
               setValue('name', e.target.value);
             }}
           />
-          <div className="invalid-feedback">{errors.id?.message}</div>
+          <div className="invalid-feedback">{errors.name?.message}</div>
         </Form.Group>
         <Form.Group className="mb-3">
           <InputMask
@@ -62,11 +65,11 @@ const UserForm = () => {
         </Form.Group>
         <Form.Group className="mb-3">
           <InputMask
-            className="default-input"
+            className={`default-input ${errors.id ? 'is-invalid' : ''}`}
+            {...register('id')}
             type="text"
             placeholder="CPF"
             mask={'999.999.999-99'}
-            {...register('id')}
             onChange={(e) => {
               setValue('id', e.target.value);
             }}
