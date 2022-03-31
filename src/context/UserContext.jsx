@@ -100,15 +100,15 @@ export const UserProvider = ({ children }) => {
   const schema = yup.object().shape({
     id: yup
       .string()
-      .required('Document is required.')
-      .matches(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/, 'Document is not valid.'),
-    name: yup.string().required('Name is required.'),
-    email: yup.string().email().required('Email is required.'),
+      .required('CPF é necessário.')
+      .matches(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/, 'O CPF não é válido!'),
+    name: yup.string().required('Nome é necessário.'),
+    email: yup.string().email().required('E-mail é necessário.'),
     phone: yup
       .string()
-      .matches(/^\([0-9]{2}\) [0-9]?[0-9]{4}-[0-9]{4}$/, 'Phone is not valid.')
-      .required(),
-    status: yup.string().required('Status is required.')
+      .matches(/^\([0-9]{2}\) [0-9]?[0-9]{4}-[0-9]{4}$/, 'Telefone não é válido!')
+      .required('Telefone é necessário.'),
+    status: yup.string().required('Status é necessário.')
   });
 
   return (
