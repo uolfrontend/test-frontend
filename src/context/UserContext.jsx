@@ -30,6 +30,7 @@ export const UserProvider = ({ children }) => {
       label: 'Desativado'
     }
   ]);
+  const [userStatus, setUserStatus] = useState({});
   const [isModalOpen, setIsModalOpen] = useState(false);
 
   const handleState = () => {
@@ -50,11 +51,12 @@ export const UserProvider = ({ children }) => {
         return 'Desconhecido';
     }
   };
-
-  const [userStatus, setUserStatus] = useState({
-    label: translateStatus(user.status),
-    value: user.status
-  });
+  useEffect(() => {
+    setUserStatus({
+      label: translateStatus(user.status),
+      value: user.status
+    });
+  }, [user]);
 
   const schema = yup.object().shape({
     id: yup

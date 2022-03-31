@@ -34,11 +34,11 @@ const UserCard = ({ id, name, email, phone, status, statusTranslated }) => {
               variant="outline-warning"
               onClick={() => {
                 setUser({
-                  id,
-                  name,
-                  email,
-                  phone,
-                  status
+                  id: id,
+                  name: name,
+                  email: email,
+                  phone: phone,
+                  status: status
                 });
                 handleState();
               }}>
