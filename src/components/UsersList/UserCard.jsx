@@ -10,25 +10,25 @@ const UserCard = ({ id, name, email, phone, status, statusTranslated }) => {
   return (
     <div className="user-info-card">
       <Row>
-        <Col md={4}>
+        <Col lg={4} md={4} sm={12} xs={12}>
           <div className="user-info">
             <p>{name}</p>
             <p>{email}</p>
           </div>
         </Col>
-        <Col md={3}>
+        <Col lg={3} md={3} sm={12} xs={12}>
           <div className="user-info">
             <p>{id}</p>
             <p>{phone}</p>
           </div>
         </Col>
-        <Col md={3}>
+        <Col lg={3} md={3} sm={12} xs={12}>
           <div className="user-status">
             <span className={status}></span>
             <p>{statusTranslated}</p>
           </div>
         </Col>
-        <Col md={2}>
+        <Col lg={2} md={2} sm={12} xs={12}>
           <div className="user-edit">
             <Button
               variant="outline-warning"

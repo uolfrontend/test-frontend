@@ -85,3 +85,15 @@
     font-weight: 100;
   }
 }
+
+@media (max-width: 1000px) {
+  .user-edit button {
+    padding: 0.4rem 1.5rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .user-edit button {
+    margin-top: 20px;
+  }
+}

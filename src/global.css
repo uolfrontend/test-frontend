@@ -22,12 +22,17 @@ p {
   flex-direction: row;
   align-items: center;
   background-color: white;
-  border: 1px solid #e3e2e2;
+  border: 1px solid #9b9393 !important;
   border-radius: 7px;
   padding: 12px !important;
   font-size: 0.95em !important;
   color: black;
   width: 100%;
+}
+
+.drop-up {
+  border: 1px solid #9b9393 !important;
+  border-radius: 7px;
 }
 
 .react-select__indicator-separator {
@@ -85,4 +90,18 @@ p {
 .react-select__multi-value {
   border-radius: 6px !important;
   margin-right: 7px !important;
+}
+
+.is-invalid {
+  border: 1px solid red;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+@media (max-width: 450px) {
+  .create-user-btn {
+    margin-top: 20px;
+  }
 }
