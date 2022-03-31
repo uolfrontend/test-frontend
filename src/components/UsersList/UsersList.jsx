@@ -1,33 +1,20 @@
 import { useContext } from 'react';
+
 import { UserContext } from '../../context/UserContext';
 
 import UserCard from './UserCard';
 import UsersListHeader from './UsersListHeader';
 import UsersListFooter from './UsersListFooter';
+import ModalEdit from './Modal/ModalEdit';
 
 import './styles.scss';
 
 const UsersList = () => {
-  const { users } = useContext(UserContext);
-
-  const translateStatus = (status) => {
-    switch (status) {
-      case 'active':
-        return 'Ativo';
-      case 'inactive':
-        return 'Inativo';
-      case 'waiting':
-        return 'Aguardando ativação';
-      case 'disabled':
-        return 'Desativado';
-      default:
-        return 'Desconhecido';
-    }
-  };
-
+  const { users, translateStatus } = useContext(UserContext);
   return (
     <div>
       <UsersListHeader />
+      <ModalEdit />
       <div className="mt-4">
         {users.map((user, index) => {
           return (

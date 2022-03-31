@@ -1,8 +1,12 @@
+import { useContext } from 'react';
 import { Col, Row, Button } from 'react-bootstrap';
+
+import { UserContext } from '../../context/UserContext';
 
 import './styles.scss';
 
 const UserCard = ({ id, name, email, phone, status, statusTranslated }) => {
+  const { setUser, handleState } = useContext(UserContext);
   return (
     <div className="user-info-card">
       <Row>
@@ -26,7 +30,20 @@ const UserCard = ({ id, name, email, phone, status, statusTranslated }) => {
         </Col>
         <Col md={2}>
           <div className="user-edit">
-            <Button variant="outline-warning">Editar</Button>
+            <Button
+              variant="outline-warning"
+              onClick={() => {
+                setUser({
+                  id,
+                  name,
+                  email,
+                  phone,
+                  status
+                });
+                handleState();
+              }}>
+              Editar
+            </Button>
           </div>
         </Col>
       </Row>
