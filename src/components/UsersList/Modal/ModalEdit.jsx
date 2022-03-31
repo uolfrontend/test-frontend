@@ -8,26 +8,47 @@ import { yupResolver } from '@hookform/resolvers/yup';
 
 import { UserContext } from '../../../context/UserContext';
 
-import './styles.scss';
-
 const ModalEdit = () => {
-  const { user, handleState, isModalOpen, usersStatus, userStatus, setUserStatus, schema } =
-    useContext(UserContext);
+  const {
+    user,
+    handleState,
+    isModalOpen,
+    usersStatus,
+    userStatus,
+    setUserStatus,
+    schema,
+    userName,
+    setUserName,
+    userEmail,
+    setUserEmail,
+    userPhone,
+    setUserPhone,
+    editUser
+  } = useContext(UserContext);
   const {
     register,
     handleSubmit,
     formState: { errors },
-    reset
+    reset,
+    setValue
   } = useForm({
     resolver: yupResolver(schema)
   });
 
   useEffect(() => {
+    setUserName(user.name);
+    setUserEmail(user.email);
+    setUserPhone(user.phone);
+    setValue('name', user.name);
+    setValue('status', userStatus);
+    setValue('id', user.id);
+    setValue('email', user.email);
+    setValue('phone', user.phone);
     reset();
-  }, [userStatus]);
+  }, [user]);
 
   const onSubmitHandler = (data) => {
-    console.log({ data });
+    editUser(data);
     reset();
   };
 
@@ -42,61 +63,79 @@ const ModalEdit = () => {
             <Form.Group className="mb-3">
               <Form.Label>ID (Documento)</Form.Label>
               <InputMask
-                className="default-input"
+                className="default-input disabled"
                 type="text"
+                disabled
                 placeholder="XXX.XXX.XXX-XX"
                 mask={'999.999.999-99'}
                 {...register('id')}
                 value={user.id}
               />
-              <p>{errors.id?.message}</p>
+              <div className="invalid-feedback">{errors.id?.message}</div>
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Nome</Form.Label>
               <InputMask
-                className="default-input"
+                className={`default-input ${errors.name ? 'is-invalid' : ''}`}
                 {...register('name')}
                 type="text"
                 placeholder="..."
-                value={user.name}
+                value={userName}
+                onChange={(e) => {
+                  setUserName(e.target.value);
+                  setValue('name', e.target.value);
+                }}
               />
+              <div className="invalid-feedback">{errors.name?.message}</div>
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Email</Form.Label>
               <InputMask
-                className="default-input"
+                className={`default-input ${errors.email ? 'is-invalid' : ''}`}
                 {...register('email')}
                 type="email"
                 placeholder="xxx@xxx.xxx"
-                value={user.email}
+                value={userEmail}
+                onChange={(e) => {
+                  setUserEmail(e.target.value);
+                  setValue('email', e.target.value);
+                }}
               />
-              <p>{errors.email?.message}</p>
+              <div className="invalid-feedback">{errors.email?.message}</div>
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Telefone</Form.Label>
               <InputMask
-                className="default-input"
+                className={`default-input ${errors.phone ? 'is-invalid' : ''}`}
                 {...register('phone')}
                 type="text"
                 placeholder="(XX) 9XXXX-XXXX"
                 mask={'(99) 99999-9999'}
-                value={user.phone}
+                value={userPhone}
+                onChange={(e) => {
+                  setUserPhone(e.target.value);
+                  setValue('phone', e.target.value);
+                }}
               />
-              <p>{errors.phone?.message}</p>
+              <div className="invalid-feedback">{errors.phone?.message}</div>
             </Form.Group>
             <Form.Group className="mb-3">
               <Form.Label>Status</Form.Label>
               <Select
-                className="drop-up"
+                className={`drop-up ${errors.status ? 'is-invalid' : ''}`}
                 noOptionsMessage={() => 'Sem opções'}
                 classNamePrefix="react-select"
                 placeholder={'Selecionar o status'}
                 value={userStatus}
                 options={usersStatus}
                 isClearable={false}
-                onChange={(status) => setUserStatus(status)}
+                onChange={(status) => {
+                  setUserStatus(status);
+                  setValue('status', status.value);
+                }}
               />
               <input type="hidden" {...register('status')} value={userStatus.value} />
+              <div className="invalid-feedback">{errors.status?.message}</div>
             </Form.Group>
           </Modal.Body>
           <Modal.Footer>

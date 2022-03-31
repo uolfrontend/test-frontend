@@ -11,6 +11,9 @@ export const UserProvider = ({ children }) => {
     localStorage.setItem('users', JSON.stringify(userList.customers));
   }
   const [user, setUser] = useState({});
+  const [userName, setUserName] = useState('');
+  const [userEmail, setUserEmail] = useState('');
+  const [userPhone, setUserPhone] = useState('');
   const [users, setUsers] = useState(JSON.parse(localStorage.getItem('users')));
   const [usersStatus, setUsersStatus] = useState([
     {
@@ -32,6 +35,7 @@ export const UserProvider = ({ children }) => {
   ]);
   const [userStatus, setUserStatus] = useState({});
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [reload, setReload] = useState(false);
 
   const handleState = () => {
     setIsModalOpen(!isModalOpen);
@@ -51,6 +55,17 @@ export const UserProvider = ({ children }) => {
         return 'Desconhecido';
     }
   };
+
+  const editUser = (user) => {
+    let users = JSON.parse(localStorage.getItem('users'));
+    let foundUser = users.findIndex((x) => x.id == user.id);
+    users[foundUser] = user;
+    localStorage.setItem('users', JSON.stringify(users));
+    setReload(true);
+    setIsModalOpen(false);
+    return true;
+  };
+
   useEffect(() => {
     setUserStatus({
       label: translateStatus(user.status),
@@ -58,18 +73,23 @@ export const UserProvider = ({ children }) => {
     });
   }, [user]);
 
+  useEffect(() => {
+    setUsers(JSON.parse(localStorage.getItem('users')));
+    setReload(false);
+  }, [reload]);
+
   const schema = yup.object().shape({
     id: yup
       .string()
-      .required()
-      .matches(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/, 'Document is not valid!'),
-    name: yup.string().required(),
-    email: yup.string().email().required(),
+      .required('Document is required.')
+      .matches(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/, 'Document is not valid.'),
+    name: yup.string().required('Name is required.'),
+    email: yup.string().email().required('Email is required.'),
     phone: yup
       .string()
-      .matches(/^\([0-9]{2}\) [0-9]?[0-9]{4}-[0-9]{4}$/, 'Phone is not valid!')
+      .matches(/^\([0-9]{2}\) [0-9]?[0-9]{4}-[0-9]{4}$/, 'Phone is not valid.')
       .required(),
-    status: yup.string().required()
+    status: yup.string().required('Status is required.')
   });
 
   return (
@@ -85,7 +105,14 @@ export const UserProvider = ({ children }) => {
         translateStatus,
         userStatus,
         setUserStatus,
-        schema
+        schema,
+        userName,
+        setUserName,
+        userEmail,
+        setUserEmail,
+        userPhone,
+        setUserPhone,
+        editUser
       }}>
       {children}
     </UserContext.Provider>
