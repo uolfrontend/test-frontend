@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { useContext, useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { Button, Form, TabPane } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
@@ -34,7 +34,9 @@ const UserForm = () => {
     }
   };
 
-  console.log(errors, errors.id?.message);
+  useEffect(() => {
+    reset();
+  }, []);
 
   return (
     <div className="mt-5" id="create-user">
@@ -91,6 +93,7 @@ const UserForm = () => {
         </Form.Group>
         <Form.Group className="mb-3">
           <Select
+            {...register('status')}
             className={`drop-up ${errors.status ? 'is-invalid' : ''}`}
             noOptionsMessage={() => 'Sem opções'}
             classNamePrefix="react-select"
@@ -101,7 +104,6 @@ const UserForm = () => {
               setValue('status', status.value);
             }}
           />
-          <input type="hidden" {...register('status')} value={userStatus.value} />
           <div className="invalid-feedback">{errors.status?.message}</div>
         </Form.Group>
         <div className="btns mt-5">
