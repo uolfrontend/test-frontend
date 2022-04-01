@@ -10,7 +10,7 @@ const App: FC = () => {
       <header className='flex justify-center bg-black w-full'>
         <img className='h-24' src={logo} alt="" />
       </header>
-      <div className='max-w-5xl w-full pt-40 px-4' >
+      <div className='max-w-5xl w-full pt-24 px-4' >
         <div className='flex items-center pb-4' >
           <img className='h-12' src={person} alt="" />
           <h1>Painel de clientes</h1>
