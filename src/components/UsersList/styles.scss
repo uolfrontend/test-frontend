@@ -1,0 +1,99 @@
+.user-info-card {
+  border: 1px solid #e3e3e3e0;
+  padding: 1.3rem 2.2rem;
+  margin: 2rem 0;
+}
+
+.user-info {
+  display: flex;
+  flex-direction: column;
+  p {
+    display: inline-block;
+    margin-bottom: 0;
+    color: #686262e8;
+  }
+  p:first-child {
+    font-weight: 500;
+  }
+  p:first-child + p {
+    font-weight: 300;
+  }
+}
+
+.user-status {
+  display: flex;
+  align-items: center;
+  font-weight: 300;
+  top: 50%;
+  transform: translateY(-50%);
+  position: relative;
+
+  span {
+    height: 0.8rem;
+    width: 0.8rem;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 0.5rem;
+    transform: translateY(1px);
+  }
+
+  p {
+    font-size: 1.2rem !important;
+  }
+
+  .active {
+    background-color: #43a954;
+  }
+  .inactive {
+    background-color: #d72433;
+  }
+  .waiting {
+    background-color: #d3a342;
+  }
+  .disabled {
+    background-color: rgba(201, 199, 199, 0.867);
+  }
+}
+
+.user-edit {
+  button {
+    display: block;
+    font-size: 20px;
+    margin-left: auto;
+    padding: 0.4rem 2.5rem;
+  }
+}
+
+#users-list-header {
+  button {
+    display: block;
+    margin-left: auto;
+  }
+
+  p:first-child {
+    color: #565252e8;
+    font-weight: 500;
+    margin-bottom: 0.5rem !important;
+  }
+  p:first-child + p {
+    font-weight: 100;
+  }
+}
+
+#users-list-footer {
+  p {
+    font-weight: 100;
+  }
+}
+
+@media (max-width: 1000px) {
+  .user-edit button {
+    padding: 0.4rem 1.5rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .user-edit button {
+    margin-top: 20px;
+  }
+}
