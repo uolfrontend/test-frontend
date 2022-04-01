@@ -1,5 +1,9 @@
 import { useEffect, useState } from "react";
 
+function validateValues(values) {
+  setErrors(validate(values));
+}
+
 function useForm({ initialValues, validate }) {
   const [errors, setErrors] = useState(initialValues);
   const [values, setValues] = useState(initialValues);
@@ -24,10 +28,6 @@ function useForm({ initialValues, validate }) {
       ...touched,
       [fieldName]: true,
     });
-  }
-
-  function validateValues(values) {
-    setErrors(validate(values));
   }
 
   return {
