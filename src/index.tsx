@@ -7,18 +7,21 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Edit from './pages/Edit/Edit.lazy';
 import Store from './pages/Store/Store.lazy';
 import List from './pages/List/List';
+import SnackbarProvider from 'react-simple-snackbar'
 
 ReactDOM.render(
   <React.StrictMode>
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<App />}>
-          <Route path="" element={<List />} />
-          <Route path="edit" element={<Edit />} />
-          <Route path="store" element={<Store />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
+    <SnackbarProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<App />}>
+            <Route path="/" element={<List />} />
+            <Route path="edit" element={<Edit />} />
+            <Route path="store" element={<Store />} />
+          </Route>
+        </Routes>
+      </BrowserRouter>
+    </SnackbarProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );
