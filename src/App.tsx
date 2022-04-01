@@ -10,12 +10,12 @@ const App: FC = () => {
       <header className='flex justify-center bg-black w-full'>
         <img className='h-24' src={logo} alt="" />
       </header>
-      <div className='max-w-5xl w-full pt-40' >
+      <div className='max-w-5xl w-full pt-40 px-4' >
         <div className='flex items-center pb-4' >
           <img className='h-12' src={person} alt="" />
-          <h1 className='text-4xl' >Painel de clientes</h1>
+          <h1>Painel de clientes</h1>
         </div>
-        <hr className='pb-4'/>
+        <hr className='pb-4' />
         <Outlet />
       </div>
     </>
