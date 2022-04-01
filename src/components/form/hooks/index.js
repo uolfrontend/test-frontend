@@ -5,8 +5,8 @@ function useForm({ initialValues, validate }) {
   const [values, setValues] = useState(initialValues);
   const [touched, setTouchedFields] = useState({});
 
-  function validateValues(values) {
-    setErrors(validate(values));
+  function validateValues(formValues) {
+    setErrors(validate(formValues));
   }
 
   useEffect(() => {
