@@ -132,7 +132,8 @@ export const UserProvider = ({ children }) => {
         userPhone,
         setUserPhone,
         editUser,
-        createUser
+        createUser,
+        setIsModalOpen
       }}>
       {children}
     </UserContext.Provider>
