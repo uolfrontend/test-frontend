@@ -1,32 +1,12 @@
-# Teste front-end - UOL Produtos Digitais
+# Getting Started
 
-### O Desafio
+## 1 - `npm install`
+Import libraries.
 
-A aplicação deve mostrar primeiramente uma listagem de clientes com todas informações conforme o layout. Segundo, deve permitir a criação de novo cliente.
+## 2 - `npm start`
 
-### Começando
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Utilize o seguinte [endpoint](https://test-frontend-uolpp.web.app/customers.json) para o carregamento inicial da listagem de clientes.
-
-### Itens obrigatórios
-
-- Alertas para o usuário na tela de edição
-- Validação de CPF na tela de edição
-- Validação de telefone na tela de edição
-- Utilizar o *localStorage/IndexedDB* para persistir localmente as informações
-- Código limpo e organizado
-- Responsividade
-
-### Itens desejáveis
-
-- Testes unitários
-- React
-
-### Telas
-
-- [Tela inicial](https://test-frontend-uolpp.web.app/assets/images/tela-inicial.jpg)
-- [Tela de edição](https://test-frontend-uolpp.web.app/assets/images/tela-edicao.jpg)
-
-### Finalizando
-
-Ao finalizar seu teste nos envie um **pull request**.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
