@@ -1,19 +1,26 @@
-import * as React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route, Outlet } from 'react-router-dom';
 
-import EditUser from '@pages/EditUser';
+import MainLayout from '../components/Layouts/Main';
+
+import EditUser from '../pages/EditUser';
 import Home from '../pages/Home';
 
-const App = () => {
+const AppRoutes = () => {
   return (
-    <div className="App">
-      <h1>Welcome to React Router!</h1>
-      <Routes>
+    <Routes>
+      <Route
+        path="/"
+        element={
+          <MainLayout>
+            <Outlet />
+          </MainLayout>
+        }
+      >
         <Route path="/" element={<Home />} />
-        <Route path="about" element={<EditUser />} />
-      </Routes>
-    </div>
+        <Route path="edit-user" element={<EditUser />} />
+      </Route>
+    </Routes>
   );
 };
 
-export default App;
+export default AppRoutes;
