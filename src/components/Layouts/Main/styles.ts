@@ -10,6 +10,10 @@ export const Content = styled.main`
   padding: 107px 193px;
   background-color: ${(props) => props.theme.colors.background.light};
   flex: 1;
+
+  @media (max-width: 860px) {
+    padding: 107px 30px;
+  }
 `;
 
 export const TitleWrapper = styled.div`
