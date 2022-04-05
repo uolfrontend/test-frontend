@@ -12,13 +12,14 @@ export default createGlobalStyle`
     outline: none;
   }
 
-  html, body {
+  html, body, #root {
     height: 100%;
   }
 
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
+    font-family: "Open Sans";
   }
 
   p, h1, h2, h3, h4, h5, h6 {
