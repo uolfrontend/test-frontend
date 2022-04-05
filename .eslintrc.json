@@ -57,7 +57,8 @@
     "import/no-extraneous-dependencies": ["error", {
       "devDependencies": ["**/*.test.tsx", "**/*.spec.tsx", "src/test/*"]
     }],
-    "no-return-assign": "off"
+    "no-return-assign": "off",
+    "dot-notation": "off"
   },
   "settings": {
     "import/resolver": {
