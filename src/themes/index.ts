@@ -5,8 +5,8 @@ export default {
       dark: '#333333',
     },
     text: {
-      primary: '#414141',
-      secondary: '#555C65',
+      primary: '#333333',
+      secondary: '#47525E',
     },
     button: {
       primary: '#FFFFFF',
