@@ -1,11 +1,9 @@
 import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 
-import '@fontsource/open-sans/700.css';
-import '@fontsource/open-sans/600.css';
-import '@fontsource/open-sans/500.css';
-import '@fontsource/open-sans/400.css';
-import '@fontsource/open-sans/300.css';
+import '@fontsource/lato/700.css';
+import '@fontsource/lato/400.css';
+import '@fontsource/lato/300.css';
 
 import GlobalStyle from './styles/GlobalStyle';
 
