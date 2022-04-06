@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import status from '../../constants/status';
 
@@ -24,6 +25,8 @@ interface Props {
 }
 
 const UserCard: React.FC<Props> = ({ data }) => {
+  const navigate = useNavigate();
+
   return (
     <Container>
       <Wrapper>
@@ -41,7 +44,9 @@ const UserCard: React.FC<Props> = ({ data }) => {
         </StatusWrapper>
       </Wrapper>
       <Wrapper>
-        <Button>Editar</Button>
+        <Button onClick={() => navigate(`/edit-user/${data.id}`)}>
+          Editar
+        </Button>
       </Wrapper>
     </Container>
   );
