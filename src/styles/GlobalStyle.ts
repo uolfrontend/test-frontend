@@ -19,7 +19,7 @@ export default createGlobalStyle`
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    font-family: "Open Sans";
+    font-family: "Lato";
   }
 
   p, h1, h2, h3, h4, h5, h6 {
