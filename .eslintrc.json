@@ -58,7 +58,8 @@
       "devDependencies": ["**/*.test.tsx", "**/*.spec.tsx", "src/test/*"]
     }],
     "no-return-assign": "off",
-    "dot-notation": "off"
+    "dot-notation": "off",
+    "no-useless-escape": "off"
   },
   "settings": {
     "import/resolver": {
