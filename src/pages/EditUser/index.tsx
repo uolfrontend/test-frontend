@@ -55,6 +55,7 @@ const EditUser: React.FC = () => {
         id: yup
           .string()
           .required('CPF é obrigatório')
+          // eslint-disable-next-line no-useless-escape
           .matches(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/, 'CPF inválido'),
       });
 
