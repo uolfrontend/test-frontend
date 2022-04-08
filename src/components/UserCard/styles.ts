@@ -12,13 +12,14 @@ export const Container = styled.div`
     ${(props) => transparentize(0.7, props.theme.colors.disabled)};
   padding: 20px 35px;
   align-items: center;
+  gap: 20px;
+
   & + & {
     margin-top: 25px;
   }
 
   @media (max-width: 1290px) {
-    grid-template-columns: 1fr 0fr;
-    gap: 20px;
+    grid-template-columns: 1fr 0.5fr;
   }
 
   @media (max-width: 510px) {
@@ -46,6 +47,7 @@ export const Text = styled.p`
   color: ${(props) => lighten(0.2, props.theme.colors.text.secondary)};
   font-weight: 400;
   font-size: 18px;
+  word-break: break-all;
 `;
 
 export const StatusWrapper = styled.div`
