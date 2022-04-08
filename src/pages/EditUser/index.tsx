@@ -18,6 +18,33 @@ interface UserData {
   status?: 'active' | 'inactive' | 'waiting' | 'disabled';
 }
 
+const schema = yup.object().shape({
+  name: yup.string().required('Nome é obrigatório'),
+  email: yup
+    .string()
+    .required('E-mail é obrigatório')
+    .matches(
+      /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/,
+      'E-mail inválido, digite novamente',
+    ),
+  phone: yup
+    .string()
+    .required('Número de telefone é obrigatório')
+    .matches(/[(]([0-9]{2})[)] ([1-9][0-9]{4})-([0-9]{4})/, 'Número inválido'),
+  status: yup.string().required('Status é obrigatório'),
+  id: yup
+    .string()
+    .required('CPF é obrigatório')
+    .matches(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/, 'CPF inválido'),
+});
+
+const status = [
+  { value: 'active', text: 'Ativo' },
+  { value: 'inactive', text: 'Inativo' },
+  { value: 'waiting', text: 'Aguardando ativação' },
+  { value: 'disabled', text: 'Desativado' },
+];
+
 const EditUser: React.FC = () => {
   const [user, setUser] = useState<UserData>({
     name: undefined,
@@ -35,30 +62,6 @@ const EditUser: React.FC = () => {
     try {
       e.preventDefault();
 
-      const schema = yup.object().shape({
-        name: yup.string().required('Nome é obrigatório'),
-        email: yup
-          .string()
-          .required('E-mail é obrigatório')
-          .matches(
-            /^\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$/,
-            'E-mail inválido, digite novamente',
-          ),
-        phone: yup
-          .string()
-          .required('Número de telefone é obrigatório')
-          .matches(
-            /[(]([0-9]{2})[)] ([1-9][0-9]{4})-([0-9]{4})/,
-            'Número inválido',
-          ),
-        status: yup.string().required('Status é obrigatório'),
-        id: yup
-          .string()
-          .required('CPF é obrigatório')
-          // eslint-disable-next-line no-useless-escape
-          .matches(/^\d{3}\.\d{3}\.\d{3}\-\d{2}$/, 'CPF inválido'),
-      });
-
       await schema.validate(user, {
         abortEarly: false,
       });
@@ -70,7 +73,7 @@ const EditUser: React.FC = () => {
       localStorage.setItem('users', JSON.stringify(newUsers));
 
       navigate(-1);
-    } catch (err) {
+    } catch (err: any) {
       if (err instanceof yup.ValidationError) {
         err.inner.forEach((error) => {
           toast.error(error.message, {
@@ -96,6 +99,10 @@ const EditUser: React.FC = () => {
       const findUser = parsedUsers.find(
         (parsedUser: UserData) => parsedUser.id === params.id,
       );
+
+      if (!findUser) {
+        navigate('/');
+      }
 
       setUsers(parsedUsers);
 
@@ -139,12 +146,7 @@ const EditUser: React.FC = () => {
           placeholder="Telefone"
         />
         <Select
-          items={[
-            { value: 'active', text: 'Ativo' },
-            { value: 'inactive', text: 'Inativo' },
-            { value: 'waiting', text: 'Aguardando ativação' },
-            { value: 'disabled', text: 'Desativado' },
-          ]}
+          items={status}
           setValue={(value) => setUser({ ...user, status: value })}
           defaultValue={user.status}
         />
