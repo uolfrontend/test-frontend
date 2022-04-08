@@ -105,13 +105,16 @@ const EditUser: React.FC = () => {
       );
 
       setUsers(parsedUsers);
+
       setUser(findUser);
     }
   }, []);
 
   React.useEffect(() => {
-    setUser({ ...user, status });
-  }, [status]);
+    if (user.id) {
+      setUser({ ...user, status });
+    }
+  }, [status, user]);
 
   return (
     <>
