@@ -7,7 +7,7 @@ interface CustomButtonProps {
 
 export const CustomButton = styled.button<CustomButtonProps>`
   width: ${(props) => (props.size === 'lg' ? 130 : 115)}px;
-  height: ${(props) => (props.size === 'lg' ? 50 : 37)}px;
+  padding: ${(props) => (props.size === 'lg' ? 15 : 10)}px;
   background-color: ${(props) =>
     props.theme.colors.button.background[props.colorScheme]};
   color: ${(props) => props.theme.colors.button.text[props.colorScheme]};
