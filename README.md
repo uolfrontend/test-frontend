@@ -1,46 +1,67 @@
-# Getting Started with Create React App
+<center>
+  <img src="https://conteudo.imguol.com.br/c/home/interacao/facebook/compartilhe.png" width="400">
+</center>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Teste Frontend - UOL 💻
+![](https://img.shields.io/badge/React-18.0.0-blue)
+![](https://img.shields.io/badge/Typescript-4.6.3-yellow)
+![](https://img.shields.io/badge/Jest-27.5.1-green)
 
-In the project directory, you can run:
+## Sobre
+A aplicação foi desenvolvida durante o processo seletivo para desenvolvedor front-end do UOL. A sua funcionalidade consiste em listagem de clientes, podendo editar ou criar um novo cliente.
 
-### `npm start`
+## Itens Obrigatórios Desenvolvidos
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [x] Alertas para o usuário na tela de edição
+- [x] Validação de CPF na tela de edição
+- [x] Validação de telefone na tela de edição
+- [x] Utilizar o localStorage/IndexedDB para persistir localmente as informações
+- [x] Código limpo e organizado
+- [x] Responsividade
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Itens Desejáveis Desenvolvidos
 
-### `npm test`
+- [x] Testes unitários
+- [x] React
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Tecnologias Utilizadas
 
-### `npm run build`
+- React
+- Typescript
+- Jest
+- Styled-Components
+- Axios
+## Resultado
+#### Tela Home:
+![screencapture-uol](https://user-images.githubusercontent.com/36713669/162437204-51517eb6-b9eb-480a-9bd8-4d60de188f47.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### Tela Edição de Usuário:
+![screencapture-uol](https://user-images.githubusercontent.com/36713669/162437490-8624201d-4cf2-4cee-820a-7e95f79b91ef.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Como usar
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### - Link do site
 
-### `npm run eject`
+https://uol.vercel.app/
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### - Instalar localmente
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Antes de começar faça um clone desse repositório no seu computador:
+> git clone https://github.com/adilier/test-frontend.git
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Entre na pasta do projeto e instale as dependência usando o comando:
+#### Yarn
+> yarn 
+#### NPM
+> npm install
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Finalizando a instalação é só iniciar o projeto com o comando:
+#### Yarn
+> yarn start
+#### NPM
+> npm start
 
-## Learn More
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
