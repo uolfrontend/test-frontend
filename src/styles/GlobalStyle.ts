@@ -16,10 +16,13 @@ export default createGlobalStyle`
     height: 100%;
   }
 
+  body, input, button {
+    font-family: "Lato";
+  }
+
   body {
     line-height: 1.5;
     -webkit-font-smoothing: antialiased;
-    font-family: "Lato";
   }
 
   p, h1, h2, h3, h4, h5, h6 {

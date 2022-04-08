@@ -4,6 +4,9 @@ import { lighten } from 'polished';
 export const SectionInfo = styled.div`
   display: flex;
   margin-bottom: 35px;
+  flex: 1;
+  justify-content: space-between;
+  align-items: center;
 `;
 
 export const Title = styled.h2`

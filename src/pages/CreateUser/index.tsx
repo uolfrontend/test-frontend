@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { toast } from 'react-toastify';
+import { useNavigate } from 'react-router-dom';
 import * as yup from 'yup';
+import { toast } from 'react-toastify';
 
 import InputMask from '../../components/InputMask';
 import Input from '../../components/Input';
@@ -26,10 +26,8 @@ const EditUser: React.FC = () => {
     status: undefined,
     id: undefined,
   });
-  const [users, setUsers] = useState<UserData[]>([]);
   const [status, setStatus] = useState<UserData['status']>();
 
-  const params = useParams();
   const navigate = useNavigate();
 
   const handleSubmitForm = async (e: React.FormEvent) => {
@@ -64,19 +62,17 @@ const EditUser: React.FC = () => {
         abortEarly: false,
       });
 
-      const objectHasValue = Object.values(user).every((value) => !!value);
+      const storageUsers = localStorage.getItem('users');
 
-      if (!objectHasValue) {
-        return;
+      if (storageUsers) {
+        const users = JSON.parse(storageUsers);
+
+        const newUsers = [...users, { ...user, status }];
+
+        localStorage.setItem('users', JSON.stringify(newUsers));
+
+        navigate(-1);
       }
-
-      const newUsers = users.map((userData: any) =>
-        userData.id === params.id ? { ...user, status } : userData,
-      );
-
-      localStorage.setItem('users', JSON.stringify(newUsers));
-
-      navigate(-1);
     } catch (err) {
       if (err instanceof yup.ValidationError) {
         err.inner.forEach((error) => {
@@ -94,31 +90,12 @@ const EditUser: React.FC = () => {
     }
   };
 
-  React.useEffect(() => {
-    const storageUsers = localStorage.getItem('users');
-
-    if (storageUsers) {
-      const parsedUsers = JSON.parse(storageUsers);
-
-      const findUser = parsedUsers.find(
-        (parsedUser: UserData) => parsedUser.id === params.id,
-      );
-
-      setUsers(parsedUsers);
-      setUser(findUser);
-    }
-  }, []);
-
-  React.useEffect(() => {
-    setUser({ ...user, status });
-  }, [status]);
-
   return (
     <>
       <SectionInfo>
         <div>
-          <Title>Edição de usuário</Title>
-          <Text>Informe os campos a seguir para editar o usuário:</Text>
+          <Title>Criação de usuário</Title>
+          <Text>Informe os campos a seguir para criar novo usuário:</Text>
         </div>
       </SectionInfo>
       <Form onSubmit={handleSubmitForm}>
@@ -156,11 +133,10 @@ const EditUser: React.FC = () => {
             { value: 'disabled', text: 'Desativado' },
           ]}
           setValue={setStatus}
-          defaultValue={user.status}
         />
         <ButtonsWrapper>
           <Button colorScheme="secondary" type="submit">
-            Editar
+            Criar
           </Button>
           <Button type="button" onClick={() => navigate(-1)}>
             Voltar

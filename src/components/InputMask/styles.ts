@@ -1,7 +1,8 @@
 import styled from 'styled-components';
+import InputMask from 'react-input-mask';
 import { lighten } from 'polished';
 
-export const CustomInput = styled.input`
+export const CustomInput = styled(InputMask)`
   padding: 15px 15px;
   border: solid 1px
     ${(props) => lighten(0.3, props.theme.colors.text.secondary)};
