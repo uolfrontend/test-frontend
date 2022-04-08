@@ -27,7 +27,6 @@ const EditUser: React.FC = () => {
     id: undefined,
   });
   const [users, setUsers] = useState<UserData[]>([]);
-  const [status, setStatus] = useState<UserData['status']>();
 
   const params = useParams();
   const navigate = useNavigate();
@@ -71,7 +70,7 @@ const EditUser: React.FC = () => {
       }
 
       const newUsers = users.map((userData: any) =>
-        userData.id === params.id ? { ...user, status } : userData,
+        userData.id === params.id ? { ...user } : userData,
       );
 
       localStorage.setItem('users', JSON.stringify(newUsers));
@@ -109,12 +108,6 @@ const EditUser: React.FC = () => {
       setUser(findUser);
     }
   }, []);
-
-  React.useEffect(() => {
-    if (user.id) {
-      setUser({ ...user, status });
-    }
-  }, [status, user]);
 
   return (
     <>
@@ -158,7 +151,7 @@ const EditUser: React.FC = () => {
             { value: 'waiting', text: 'Aguardando ativação' },
             { value: 'disabled', text: 'Desativado' },
           ]}
-          setValue={setStatus}
+          setValue={(value) => setUser({ ...user, status: value })}
           defaultValue={user.status}
         />
         <ButtonsWrapper>

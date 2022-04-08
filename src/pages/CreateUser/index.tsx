@@ -26,7 +26,6 @@ const EditUser: React.FC = () => {
     status: undefined,
     id: undefined,
   });
-  const [status, setStatus] = useState<UserData['status']>();
 
   const navigate = useNavigate();
 
@@ -67,7 +66,7 @@ const EditUser: React.FC = () => {
       if (storageUsers) {
         const users = JSON.parse(storageUsers);
 
-        const newUsers = [...users, { ...user, status }];
+        const newUsers = [...users, { ...user }];
 
         localStorage.setItem('users', JSON.stringify(newUsers));
 
@@ -132,7 +131,7 @@ const EditUser: React.FC = () => {
             { value: 'waiting', text: 'Aguardando ativação' },
             { value: 'disabled', text: 'Desativado' },
           ]}
-          setValue={setStatus}
+          setValue={(value) => setUser({ ...user, status: value })}
         />
         <ButtonsWrapper>
           <Button colorScheme="secondary" type="submit">
