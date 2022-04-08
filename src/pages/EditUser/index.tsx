@@ -63,12 +63,6 @@ const EditUser: React.FC = () => {
         abortEarly: false,
       });
 
-      const objectHasValue = Object.values(user).every((value) => !!value);
-
-      if (!objectHasValue) {
-        return;
-      }
-
       const newUsers = users.map((userData: any) =>
         userData.id === params.id ? { ...user } : userData,
       );
