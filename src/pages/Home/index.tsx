@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import api from '../../services';
+import customers from '../../constants/customers';
 
 import UserCard from '../../components/UserCard';
 import Button from '../../components/Button';
@@ -29,9 +30,10 @@ const Home: React.FC = () => {
         return;
       }
 
-      const response = await api.get('');
+      // Api estava com problema de CORS, para conseguir enviar o deploy utilizei os dados no local
+      // const response = await api.get('');
 
-      setUsers(response.data.customers);
+      setUsers(customers);
     } catch (err) {
       console.log(err);
     }
