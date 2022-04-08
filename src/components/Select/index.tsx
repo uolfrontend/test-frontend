@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FiChevronDown } from 'react-icons/fi';
+
+import useClickOutside from '../../hooks/useClickOutside';
 
 import {
   SelectContainer,
@@ -24,6 +26,8 @@ const Select: React.FC<Props> = ({ items, setValue, defaultValue }) => {
   const [selectedItem, setSelectedItem] = useState('');
   const [active, setActive] = useState(false);
 
+  const ref = useRef<HTMLDivElement>(null);
+
   const handleOptionClick = (item: ItemData) => {
     setActive(false);
     setSelectedItem(item.text);
@@ -38,8 +42,10 @@ const Select: React.FC<Props> = ({ items, setValue, defaultValue }) => {
     }
   }, [defaultValue]);
 
+  useClickOutside(ref, () => setActive(false));
+
   return (
-    <Container>
+    <Container ref={ref}>
       <SelectContainer onClick={() => setActive(!active)}>
         <SelectText value={selectedItem}>{selectedItem || 'Status'}</SelectText>
         <FiChevronDown size={23} />
@@ -51,6 +57,7 @@ const Select: React.FC<Props> = ({ items, setValue, defaultValue }) => {
               onClick={() => handleOptionClick(item)}
               active={selectedItem === item.text}
               key={item.value}
+              type="button"
             >
               {item.text}
             </Option>
