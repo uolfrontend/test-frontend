@@ -62,6 +62,14 @@ Finalizando a instalação é só iniciar o projeto com o comando:
 #### NPM
 > npm start
 
+## Executar os Testes
 
+Para executar os testes unitários é preciso rodar o comando:
+ 
+#### yarn
+> yarn test
+
+#### npm
+> npm run test
 
 
