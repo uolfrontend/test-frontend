@@ -23,7 +23,7 @@ export default function Headline({title, description, button}: Props) {
           Painel de clientes
         </Heading>
       </Flex>
-      <Divider my="20px" borderColor="primary" />
+      <Divider my="20px" borderColor="lighter" />
       <Flex
         justify="space-between"
         direction={{base: 'column', md: 'row'}}
