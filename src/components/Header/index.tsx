@@ -1,6 +1,5 @@
-import {Box, Flex} from '@chakra-ui/react';
+import {Flex} from '@chakra-ui/react';
 import Image from 'next/image';
-import React from 'react';
 import logo from '@public/assets/images/logo.png';
 
 export default function Header() {

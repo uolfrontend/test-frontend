@@ -1,13 +1,12 @@
 import Headline from '@components/Headline';
 import Container from 'src/layout/Container';
 
-export default function Home() {
+export default function AddClient() {
   return (
     <Container py={{base: '40px', md: '100px'}}>
       <Headline
-        title="Listagem de usuários"
-        description="Escolha um cliente para visualizar os detalhes"
-        button="Novo cliente"
+        title="Novo usuário"
+        description="Informe os campos a seguir para criar novo usuário:"
       />
     </Container>
   );
