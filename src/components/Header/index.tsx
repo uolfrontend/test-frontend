@@ -4,7 +4,7 @@ import logo from '@public/assets/images/logo.png';
 
 export default function Header() {
   return (
-    <Flex h="60px" w="100%" bg="darker" justify="center" py="10px">
+    <Flex h="60px" w="100%" bg="darker" justify="center">
       <Image
         src={logo}
         alt="UOL - Universo Online"

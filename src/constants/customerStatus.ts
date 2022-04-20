@@ -1,5 +1,9 @@
 export const customerStatus = [
   {
+    status: 'status',
+    label: 'Status',
+  },
+  {
     status: 'active',
     label: 'Ativo',
     color: 'green',

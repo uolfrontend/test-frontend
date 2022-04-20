@@ -19,7 +19,8 @@
       "@components/*": ["./src/components/*"],
       "@config/*": ["./src/config/*"],
       "@services/*": ["./src/services/*"],
-      "@public/*": ["./public/*"]
+      "@public/*": ["./public/*"],
+      "@utils/*": ["./src/utils/*"]
     }
   },
   "include": [
