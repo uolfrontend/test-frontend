@@ -1,4 +1,5 @@
 import Headline from '@components/Headline';
+import UserForm from '@components/UserForm';
 import Container from 'src/layout/Container';
 
 export default function AddClient() {
@@ -8,6 +9,7 @@ export default function AddClient() {
         title="Novo usuário"
         description="Informe os campos a seguir para criar novo usuário:"
       />
+      <UserForm />
     </Container>
   );
 }

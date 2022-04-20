@@ -2,15 +2,22 @@ import {Flex, Text} from '@chakra-ui/react';
 import Headline from '@components/Headline';
 import UserList from '@components/UserList';
 import {getAllClients} from '@services/getAllClients';
+import {getLocalValue, setLocalValue} from '@utils/localStorageManager';
 import {useEffect, useState} from 'react';
 import Container from 'src/layout/Container';
 
 export default function Home() {
   const [customers, setCustomers] = useState<TCustomer[]>([]);
+
   useEffect(() => {
-    getAllClients().then((data) => {
-      setCustomers(data);
-    });
+    const localClients = getLocalValue('clients');
+    if (localClients) setCustomers(localClients);
+    if (!localClients) {
+      getAllClients().then((data) => {
+        setCustomers(data);
+        setLocalValue('clients', data);
+      });
+    }
   }, []);
 
   return (
@@ -21,8 +28,8 @@ export default function Home() {
         button="Novo cliente"
       />
       <Flex py="50px" direction="column" gap="30px">
-        {customers.map((customer) => (
-          <UserList key={customer.name} {...customer} />
+        {customers.map((customer, key) => (
+          <UserList key={key} {...customer} />
         ))}
       </Flex>
       <Text>Exibindo {customers.length} resultados</Text>

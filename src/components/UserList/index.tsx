@@ -2,15 +2,7 @@ import {Button, Circle, Flex, Text} from '@chakra-ui/react';
 import {useRouter} from 'next/router';
 import {customerStatus} from '../../constants/customerStatus';
 
-type Props = {
-  id: string;
-  name: string;
-  email: string;
-  phone: string;
-  status: string;
-};
-
-export default function UserList({id, name, email, phone, status}: Props) {
+export default function UserList({id, name, email, phone, status}: TCustomer) {
   const [{label, color}] = customerStatus.filter(
     (element) => element.status == status
   );
