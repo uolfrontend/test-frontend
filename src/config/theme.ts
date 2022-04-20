@@ -2,9 +2,10 @@ import {extendTheme} from '@chakra-ui/react';
 
 const theme = extendTheme({
   colors: {
-    darkest: '#333333',
+    darker: '#333333',
     primary: '#969696',
     secondary: '#e29933',
+    lighter: '#d9d9d7',
   },
   fonts: {
     heading: "'Libre Franklin', sans-serif;",

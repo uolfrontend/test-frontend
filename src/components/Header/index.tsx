@@ -1,11 +1,10 @@
-import {Box, Flex} from '@chakra-ui/react';
+import {Flex} from '@chakra-ui/react';
 import Image from 'next/image';
-import React from 'react';
 import logo from '@public/assets/images/logo.png';
 
 export default function Header() {
   return (
-    <Flex h="60px" w="100%" bg="darkest" justify="center" py="10px">
+    <Flex h="60px" w="100%" bg="darker" justify="center" py="10px">
       <Image
         src={logo}
         alt="UOL - Universo Online"
