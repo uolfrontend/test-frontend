@@ -6,6 +6,7 @@ const theme = extendTheme({
     primary: '#969696',
     secondary: '#e29933',
     lighter: '#d9d9d7',
+    attention: '#c91423',
   },
   fonts: {
     heading: "'Libre Franklin', sans-serif;",
@@ -21,10 +22,8 @@ const theme = extendTheme({
           px: '30px',
           fontSize: '16px',
           borderRadius: '5px',
-          _hover: {
-            bg: 'secondary',
-          },
           _focus: {boxShadow: 'none'},
+          _hover: {_disabled: {bg: 'secondary'}},
         },
         secondary: {
           bg: 'white',
