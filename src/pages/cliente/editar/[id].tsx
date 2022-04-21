@@ -1,9 +1,15 @@
 import Headline from '@components/Headline';
+import PageTags from '@components/PageTags';
 import UserForm from '@components/UserForm';
 import {getLocalValue} from '@utils/localStorageManager';
 import {useRouter} from 'next/router';
 import React, {useEffect, useState} from 'react';
-import Container from 'src/layout/Container';
+import Container from '@components/layout/Container';
+
+const pageTagsProps = {
+  title: 'Editar cliente - Teste Front-End UOL',
+  description: 'Teste técnico UOL para Front -End',
+};
 
 export default function EditUserPage() {
   const [defaultValues, setDefaultValues] = useState<TCustomer | undefined>(
@@ -21,6 +27,7 @@ export default function EditUserPage() {
 
   return (
     <Container py={{base: '40px', md: '100px'}}>
+      <PageTags {...pageTagsProps} />
       <Headline
         title="Novo usuário"
         description="Informe os campos a seguir para criar novo usuário:"

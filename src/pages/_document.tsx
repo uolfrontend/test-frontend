@@ -6,11 +6,6 @@ class MyDocument extends Document {
     return (
       <Html lang="pt-BR">
         <Head />
-        <meta
-          name="description"
-          content="Web site created using create-react-app"
-        />
-        <title>Teste Front End - UOL</title>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" />
         <link
