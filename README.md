@@ -13,7 +13,7 @@ Utilize o seguinte [endpoint](https://test-frontend-uolpp.web.app/customers.json
 - Alertas para o usuário na tela de edição
 - Validação de CPF na tela de edição
 - Validação de telefone na tela de edição
-- Utilizar o *localStorage/IndexedDB* para persistir localmente as informações
+- Utilizar o _localStorage/IndexedDB_ para persistir localmente as informações
 - Código limpo e organizado
 - Responsividade
 
@@ -30,3 +30,5 @@ Utilize o seguinte [endpoint](https://test-frontend-uolpp.web.app/customers.json
 ### Finalizando
 
 Ao finalizar seu teste nos envie um **pull request**.
+
+[📝 Leia o README do projeto desenvolvido](./README-Ana.md)
