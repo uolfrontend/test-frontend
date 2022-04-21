@@ -14,7 +14,11 @@ export default function CustomSelect({name, options}: Props) {
   const error = errors[name];
   return (
     <FormControl isInvalid={Boolean(error)}>
-      <Select {...register(name)} defaultValue={options[0].status}>
+      <Select
+        {...register(name)}
+        defaultValue={options[0].status}
+        role="listbox"
+      >
         {options.map(({status, label}, key) => (
           <option key={key} value={status} disabled={key === 0}>
             {label}

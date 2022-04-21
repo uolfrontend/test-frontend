@@ -4,7 +4,7 @@ import {useRouter} from 'next/router';
 import {userResolver} from './resolvers/userResolver';
 import CustomInput from './CustomInput';
 import {customerStatus} from 'src/constants/customerStatus';
-import {getLocalValue, setLocalValue} from '@utils/localStorageManager';
+import {getLocalValue, setLocalValue} from '../../utils/localStorageManager';
 import CustomSelect from './CustomSelect';
 
 type Props = {
