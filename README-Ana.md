@@ -1,4 +1,4 @@
-# **Teste front-end - UOL Produtos Digitais**
+# **Teste Front-End - UOL Produtos Digitais**
 
 <h4 align="center"> 
 	✅ Teste Front End - Concluido ✅ 
@@ -44,6 +44,10 @@ Para rodar testes, execute o comando
 ```bash
   yarn test
 ```
+
+## **🧑‍💻 Variáveis de ambiente**
+
+No arquivo .env.example está disponível dados para rodar localmente através do localhost:3000
 
 ## **🛠 Tecnologias**
 
