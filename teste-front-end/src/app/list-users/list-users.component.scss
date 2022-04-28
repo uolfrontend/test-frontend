@@ -1,0 +1,67 @@
+.users {
+
+  .header-wrapper {
+    display: flex;
+    flex-direction: column;
+
+    .title {
+      font-weight: bold;
+      color: #3C3C3C;
+    }
+
+    .subtitle {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .item {
+    display: flex;
+
+    .status {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+    }
+
+    div {
+      display: flex;
+      flex-direction: column;
+      font-size: 20px;
+      width: 100%;
+      margin: 10px 0;
+
+      .dot {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        margin-right: 15px;
+        background-color: #54AB64;
+
+      }
+
+      .active {
+        background-color: #54AB64;
+      }
+
+      .inactive {
+        background-color: #D63240;
+      }
+
+      .waiting {
+        background-color: #D3A70F;
+      }
+
+      .disabled {
+        background-color: #D3D3D3;
+      }
+
+      .name,
+      .cpf {
+        font-weight: bold;
+      }
+    }
+  }
+
+}

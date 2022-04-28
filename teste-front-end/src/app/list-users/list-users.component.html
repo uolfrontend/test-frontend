@@ -1,0 +1,40 @@
+<div class="users">
+  <div class="header-wrapper">
+    <h3 class="title">Listagem de usuários</h3>
+    <div class="subtitle">
+      Escolha um cliente para visualizar os detalhes
+      <app-button text="Novo cliente"></app-button>
+    </div>
+  </div>
+
+  <ul>
+    <li class="item" *ngFor="let customer of customers">
+      <div>
+        <span class="name">
+          {{customer.name}}
+        </span>
+        <span>
+          {{customer.email}}
+        </span>
+      </div>
+      <div>
+        <span class="cpf">
+          {{customer.id}}
+        </span>
+        <span>
+          {{customer.phone}}
+        </span>
+      </div>
+      <div class="status">
+        <span [class]="customer.status" class="dot">
+        </span>
+        {{customer.status}}
+      </div>
+      <div>
+        <app-button text="Editar"></app-button>
+      </div>
+    </li>
+  </ul>
+
+  <span>Exibindo {{customers.length}} clientes</span>
+</div>
