@@ -4,15 +4,21 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { ClientPanelComponent } from './client-panel/client-panel.component';
+import { ListUsersComponent } from './list-users/list-users.component';
+import { ButtonComponent } from './button/button.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    ClientPanelComponent
+    ClientPanelComponent,
+    ListUsersComponent,
+    ButtonComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
