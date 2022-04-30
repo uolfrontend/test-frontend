@@ -17,12 +17,22 @@
     width: auto;
   }
 
+  &-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
   &-header {
     color: #3C3C3C;
   }
 
-  &-wrapper {
-    display: flex;
-    align-items: center;
+  @media screen and (max-width: 425px) {
+    &-user {
+      width: 50px;
+    }
+
+    &-header {
+      font-size: 20px;
+    }
   }
 }
