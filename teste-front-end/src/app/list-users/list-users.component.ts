@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { UsersService } from '../services/users.service';
+import { ButtonType } from '../button/button.component';
 
 @Component({
   selector: 'app-list-users',
@@ -7,8 +7,18 @@ import { UsersService } from '../services/users.service';
   styleUrls: ['./list-users.component.scss']
 })
 export class ListUsersComponent implements OnInit {
+  status: any = {
+    active: 'Ativo',
+    inactive: 'Inativo',
+    waiting: 'Aguardando ativação',
+    disabled: 'Desativado',
+  }
 
-  constructor(private usersService: UsersService) { }
+  buttonData: ButtonType[] = [
+    { text: 'Novo cliente', width: '150px', version: 'filled' },
+    {text: 'Editar', width: '150px'}
+  ]
+  constructor() { }
 
   customers = [
     {
@@ -40,17 +50,6 @@ export class ListUsersComponent implements OnInit {
       "status": "disabled"
     }
   ]
-  ngOnInit(): void {
-    
-    this.usersService.getUsers().subscribe(
-      (users) => {
-        console.log(users);
-        
-      }, (error) => {
-        console.error('Erro ao buscar usuários:',error);
-        
-      }
-    )
-  }
+  ngOnInit(): void { }
 
 }

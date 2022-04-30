@@ -3,35 +3,26 @@
     <h3 class="title">Listagem de usuários</h3>
     <div class="subtitle">
       Escolha um cliente para visualizar os detalhes
-      <app-button text="Novo cliente"></app-button>
+      <app-button routerLink="/edit" [button]="buttonData[0]"></app-button>
     </div>
   </div>
 
   <ul>
     <li class="item" *ngFor="let customer of customers">
       <div>
-        <span class="name">
-          {{customer.name}}
-        </span>
-        <span>
-          {{customer.email}}
-        </span>
+        <span class="name">{{customer.name}}</span>
+        <span>{{customer.email}}</span>
       </div>
       <div>
-        <span class="cpf">
-          {{customer.id}}
-        </span>
-        <span>
-          {{customer.phone}}
-        </span>
+        <span class="cpf">{{customer.id}}</span>
+        <span>{{customer.phone}}</span>
       </div>
       <div class="status">
-        <span [class]="customer.status" class="dot">
-        </span>
-        {{customer.status}}
+        <span [class]="customer.status" class="dot"></span>
+        {{status[customer.status]}}
       </div>
       <div>
-        <app-button text="Editar"></app-button>
+        <app-button [button]="buttonData[1]"></app-button>
       </div>
     </li>
   </ul>
