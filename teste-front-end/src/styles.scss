@@ -1,9 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
-body{
-    margin: 0;
-    font-family: 'Open Sans', sans-serif;
 
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(147, 147, 147);
 }
-.container{
-    margin: 180px;
+
+.container {
+  margin: 180px;
+
+  @media screen and (max-width: 425px) {
+    margin: 10px;
+  }
 }

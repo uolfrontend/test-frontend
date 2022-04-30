@@ -24,10 +24,10 @@ const routes: Routes = [
     NewUserComponent
   ],
   imports: [
-    BrowserModule,    
+    BrowserModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule {}
+export class AppModule { }
