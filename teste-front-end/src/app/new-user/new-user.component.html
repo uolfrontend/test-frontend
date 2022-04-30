@@ -1,0 +1,24 @@
+<div class="new-user">
+  <div class="header">
+    <h3 class="title">Novo usuário</h3>
+    <div class="subtitle">Informe os campos a seguir para criar um usuário</div>
+  </div>
+
+  <form action="" class="new-user-form">
+    <input type="text" placeholder="Nome">
+    <input type="email" name="email" placeholder="E-mail" required>
+    <input type="text" placeholder="CPF">
+    <input type="text" placeholder="Telefone">
+    <select name="status" id="status">
+      <option value="Status">Status</option>
+      <option value="active">Ativo</option>
+      <option value="inactive">Inativo</option>
+      <option value="waiting">Aguardadando ativação</option>
+      <option value="disabled">Desativado</option>
+    </select>
+    <div class="submit">
+      <app-button [button]="dataButton[0]"></app-button>
+      <app-button [button]="dataButton[1]"></app-button>
+    </div>
+  </form>
+</div>
