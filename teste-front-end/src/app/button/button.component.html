@@ -1,1 +1,7 @@
-<button class="button">{{text}}</button>
+<button
+  class="button"
+  [ngStyle]="{'width': button.width}"
+  type={{button.type}}
+  [class]="'button-' + button.version">
+  {{button.text}}
+</button>
