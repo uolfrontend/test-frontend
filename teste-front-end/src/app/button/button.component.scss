@@ -15,4 +15,9 @@
   &:hover{
       cursor: pointer;
   }
+
+  &:disabled{
+    background-color: #D3D3D3;
+    border-color: #D3D3D3;
+  }
 }

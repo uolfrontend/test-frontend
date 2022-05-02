@@ -11,6 +11,7 @@ export interface ButtonType {
   styleUrls: ['./button.component.scss']
 })
 export class ButtonComponent implements OnInit {
+  @Input() disabled: boolean = false
   @Input() button: ButtonType = {
     text: '',
     type: 'text',
