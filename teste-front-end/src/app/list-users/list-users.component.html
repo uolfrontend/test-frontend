@@ -3,7 +3,10 @@
     <h3 class="title">Listagem de usuários</h3>
     <div class="subtitle">
       Escolha um cliente para visualizar os detalhes
-      <app-button routerLink="/edit" [button]="buttonData[0]"></app-button>
+      <app-button
+        routerLink="/edit"
+        [button]="newClient">
+      </app-button>
     </div>
   </div>
 
@@ -18,11 +21,14 @@
         <span>{{client.phone}}</span>
       </div>
       <div class="status">
-        <span [class]="client.status" class="dot"></span>
-        {{status[client.status]}}
+        <span [class]="client.status || 'disabled'" class="dot"></span>
+        {{status[client.status||'disabled']}}
       </div>
       <div class="edit">
-        <app-button [button]="buttonData[1]"></app-button>
+        <app-button
+          [routerLink]="['/edit', client.id]"
+          [button]="editClient">
+        </app-button>
       </div>
     </li>
   </ul>

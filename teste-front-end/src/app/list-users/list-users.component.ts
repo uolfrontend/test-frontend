@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { LocalStorageService } from 'src/services/local-storage.service';
 import { ButtonType } from '../button/button.component';
 
-interface CostumerType {
+export interface CostumerType {
   id: string;
   name: string;
   email: string;
@@ -27,50 +27,53 @@ export class ListUsersComponent implements OnInit {
     disabled: 'Desativado',
   }
 
-  buttonData: ButtonType[] = [
-    { text: 'Novo cliente', width: '150px', version: 'filled' },
-    { text: 'Editar', width: '150px' }
-  ]
+  editClient: ButtonType = { text: 'Editar', width: '150px' }
+  newClient: ButtonType = { text: 'Novo cliente', version: 'filled' }
 
   customers: CostumerType[] = [
     {
-      "id": "512.536.530-03",
       "name": "Camila Souza",
       "email": "camila.souza@email.com",
+      "id": "512.536.530-03",
       "phone": "(11) 93463-2347",
       "status": "active"
     },
     {
-      "id": "397.553.820-11",
       "name": "Pedro Ferreira",
       "email": "peferreira@email.com",
+      "id": "397.553.820-11",
       "phone": "(11) 95529-5678",
       "status": "inactive"
     },
     {
-      "id": "921.818.210-20",
       "name": "Marcela Silva",
       "email": "masilva@email.com",
+      "id": "921.818.210-20",
       "phone": "(11) 93470-3391",
       "status": "waiting"
     },
     {
-      "id": "533.278.870-39",
       "name": "Carlos Ferraz",
       "email": "carlosferraz@email.com",
+      "id": "533.278.870-39",
       "phone": "(11) 96744-0233",
       "status": "disabled"
     }
   ]
 
   ngOnInit(): void {
-    this.initialData()
+  /**
+   * Verifica se o localstorage esta vazio
+   */
+    if (!this.service.hasStorage()) {
+      this.initialData()
+    }
     this.getAllClients()
   }
 
   /**
    * Pega o conteudo de costumar e salva os dados iniciais no localstoraga
-   * */
+   */
   initialData() {
     this.customers.forEach((data: { id: string; }) => {
       this.service.set(data.id, data)
@@ -79,7 +82,7 @@ export class ListUsersComponent implements OnInit {
 
   /**
    * Pega tudo que tiver no locastorage e salva em customers
-   * */
+   */
   getAllClients() {
     this.service.getAll().forEach((client: any, i: number) => {
       this.customers[i] = JSON.parse(client.value)

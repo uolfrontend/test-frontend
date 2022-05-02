@@ -11,6 +11,11 @@
     .subtitle {
       display: flex;
       justify-content: space-between;
+      flex-direction: column;
+
+      app-button {
+        margin-top: 10px;
+      }
     }
   }
 
@@ -27,7 +32,7 @@
       width: 100%;
     }
 
-    .edit{
+    .edit {
       width: auto;
     }
 
@@ -68,11 +73,16 @@
       }
     }
 
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 769px) {
       flex-direction: column;
+    }
+  }
 
-      div {
-        margin: 5px 0;
+  @media screen and (min-width: 767px) {
+    .header-wrapper {
+      .subtitle {
+        flex-direction: row;
+        align-items: center;
       }
     }
   }
