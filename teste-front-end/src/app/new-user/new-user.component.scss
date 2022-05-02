@@ -1,0 +1,42 @@
+.new-user {
+  .header {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 30px;
+
+    .title {
+      font-weight: bold;
+      color: #3C3C3C;
+    }
+  }
+
+  &-form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+  }
+
+  .submit {
+    margin-top: 35px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  input,
+  select {
+    padding: 10px;
+    font-size: 20px;
+    margin-bottom: 15px;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    background-color: white;
+  }
+
+  input.ng-invalid.ng-touched{
+    border-color: red;
+  }
+
+  .error-message{
+    color: red;
+  }
+}

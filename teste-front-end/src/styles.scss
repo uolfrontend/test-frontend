@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(147, 147, 147);
+}
+
+ul {
+  padding: 0;
+}
+
+.container {
+  margin: 30px;
+
+  @media screen and (min-width: 769px) {
+    margin: 60px;
+  }
+}

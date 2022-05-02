@@ -1,0 +1,9 @@
+<button
+  class="button"
+  [ngStyle]="{'width': button.width}"
+  type={{button.type}}
+  [class]="'button-' + button.version"
+  [disabled]="disabled"
+>
+  {{button.text}}
+</button>

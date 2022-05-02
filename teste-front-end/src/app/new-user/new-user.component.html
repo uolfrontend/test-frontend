@@ -1,0 +1,64 @@
+<div class="new-user">
+  <div class="header">
+    <h3 class="title">Novo usuário</h3>
+    <div class="subtitle">Informe os campos a seguir para criar um usuário</div>
+  </div>
+
+  <form (ngSubmit)="onSubmit()" #form="ngForm" class="new-user-form">
+    <input
+      type="text"
+      placeholder="Nome"
+      [ngModel]="client.name"
+      name="name"
+    >
+
+    <input
+      type="email"
+      placeholder="E-mail"
+      name="email"
+      [ngModel]="client.email"
+      required
+      email
+      #email="ngModel"
+    >
+
+    <span class="error-message" *ngIf="!email.valid && email.touched">Preencha o campo de email corretamente</span>
+
+    <input
+      type="text"
+      placeholder="CPF"
+      name="id"
+      [ngModel]="client.id"
+      required      
+      #cpf="ngModel"
+    >
+
+    <span class="error-message" *ngIf="!cpf.valid && cpf.touched">O campo de cpf é obrigatório</span>
+
+    <input
+      type="text"
+      placeholder="Telefone"
+      name="phone"
+      [ngModel]="client.phone"
+    >
+
+    <select name="status" id="status" ngModel>
+      <option value="" disabled>Status</option>
+      <option *ngFor="let item of status" [ngValue]="item.key" [selected]="item.key == client.status">
+        {{ item.status }}
+      </option>
+    </select>
+
+    <div class="submit">
+      <app-button
+        [button]="submit"
+        [disabled]="!form.valid">
+      </app-button>
+
+      <app-button
+        routerLink="/"
+        [button]="goBack">
+      </app-button>
+    </div>
+  </form>
+</div>

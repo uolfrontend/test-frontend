@@ -18,4 +18,5 @@ Esse projeto foi criado com [Angular CLI](https://github.com/angular/angular-cli
 - [ Validação do telefone](https://www.npmjs.com/package/validar-telefone)
 
 ## Possiveis erros
-Quando a extensão do uol `UOL Analytics Debugger 3.2.3` está ativada, pode ocorrer um comportamentos estranhos como os campos ficarem em branco. Para solucionar desabilite a extensão e limpe o localstorage
+Quando a extensão do uol `UOL Analytics Debugger 3.2.3` está ativada, ocorrem comportamentos estranhos como o print abaixo. Para solucionar desabilite a extensão e limpe o localstorage
+![Erro na listagem](./src/assets/screenshot/erro-lista.png)

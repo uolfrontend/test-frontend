@@ -1,0 +1,37 @@
+<div class="users">
+  <div class="header-wrapper">
+    <h3 class="title">Listagem de usuários</h3>
+    <div class="subtitle">
+      Escolha um cliente para visualizar os detalhes
+      <app-button
+        routerLink="/edit"
+        [button]="newClient">
+      </app-button>
+    </div>
+  </div>
+
+  <ul>
+    <li class="item" *ngFor="let client of customers">
+      <div>
+        <span class="name">{{client.name}}</span>
+        <span>{{client.email}}</span>
+      </div>
+      <div>
+        <span class="cpf">{{client.id}}</span>
+        <span>{{client.phone}}</span>
+      </div>
+      <div class="status">
+        <span [class]="client.status || 'disabled'" class="dot"></span>
+        {{status[client.status||'disabled']}}
+      </div>
+      <div class="edit">
+        <app-button
+          [routerLink]="['/edit', client.id]"
+          [button]="editClient">
+        </app-button>
+      </div>
+    </li>
+  </ul>
+
+  <span>Exibindo {{customers.length}} clientes</span>
+</div>
