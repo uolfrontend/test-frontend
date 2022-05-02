@@ -27,15 +27,26 @@ export class LocalStorageService {
   }
 
   getAll(): any {
-    let data = [{
-    }]
+    let data = [{}]
     if (this.storage) {
       for (let i = 0; i < this.storage.length; i++) {
         let key = this.storage.key(i) || '';
         let value = this.storage.getItem(key);
         data[i] = { key, value }
       }
+      return data;
     }
-    return data;
+  }
+
+  clear(): boolean {
+    if (this.storage) {
+      this.storage.clear();
+      return true;
+    }
+    return false;
+  }
+
+  hasStorage(): boolean {
+    return this.storage.length > 0 ? true : false
   }
 }
