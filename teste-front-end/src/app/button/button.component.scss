@@ -12,12 +12,19 @@
     color: white;
   }
 
-  &:hover{
-      cursor: pointer;
+  &:hover {
+    cursor: pointer;
   }
 
-  &:disabled{
+  &:disabled {
     background-color: #D3D3D3;
     border-color: #D3D3D3;
+  }
+
+  @media screen and (max-width: 768px) {
+    & {
+      font-size: 15px;
+      width: 100%;
+    }
   }
 }

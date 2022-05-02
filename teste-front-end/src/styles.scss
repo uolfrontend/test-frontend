@@ -6,14 +6,14 @@ body {
   color: rgb(147, 147, 147);
 }
 
-ul{
+ul {
   padding: 0;
 }
 
 .container {
-  margin: 180px;
+  margin: 30px;
 
-  @media screen and (max-width: 425px) {
-    margin: 10px;
+  @media screen and (min-width: 769px) {
+    margin: 60px;
   }
 }
