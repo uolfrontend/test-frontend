@@ -19,4 +19,3 @@ Esse projeto foi criado com [Angular CLI](https://github.com/angular/angular-cli
 
 ## Possiveis erros
 Quando a extensão do uol `UOL Analytics Debugger 3.2.3` está ativada, pode ocorrer um comportamentos estranhos como os campos ficarem em branco. Para solucionar desabilite a extensão e limpe o localstorage
-![Erro na listagem](./src/assets/screenshot/erro-lista.png)
