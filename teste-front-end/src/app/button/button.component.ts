@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
 export interface ButtonType {
   text: string,
   type?: string,
@@ -10,13 +10,10 @@ export interface ButtonType {
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent {
   @Input() disabled: boolean = false
   @Input() button: ButtonType = {
     text: '',
     type: 'text',
   }
-  constructor() { }
-
-  ngOnInit(): void { }
 }
