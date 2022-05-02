@@ -1,32 +1,22 @@
-# Teste front-end - UOL Produtos Digitais
+# Teste FrontEnd
+Esta aplicação é faz parte do teste para a vaga de front-end no UOL Produtos Digitais. A aplicação mostra uma listagem de clientes e permite a criação de novo cliente.
 
-### O Desafio
+Esse projeto foi criado com [Angular CLI](https://github.com/angular/angular-cli) versão 13.3.1.
 
-A aplicação deve mostrar primeiramente uma listagem de clientes com todas informações conforme o layout. Segundo, deve permitir a criação de novo cliente.
+## Rodar o projeto
+- Clone o repositório
+- Dentro da pasta teste-front-end/src execute o comando npm i
+- Instale o [Angular CLI](https://github.com/angular/angular-cli)
+- Rode o comando `ng serve`
+- A aplicação estara rodando no link [http://localhost:4200/](https://karma-runner.github.io).
 
-### Começando
+## Rodar os testes unitários
+- `ng test` foi utilizado o [Karma](https://karma-runner.github.io).
 
-Utilize o seguinte [endpoint](https://test-frontend-uolpp.web.app/customers.json) para o carregamento inicial da listagem de clientes.
+### Bibliotecas utilizadas
+- [ Validação do cpf](https://github.com/tiagoporto/gerador-validador-cpf)
+- [ Validação do telefone](https://www.npmjs.com/package/validar-telefone)
 
-### Itens obrigatórios
-
-- Alertas para o usuário na tela de edição
-- Validação de CPF na tela de edição
-- Validação de telefone na tela de edição
-- Utilizar o *localStorage/IndexedDB* para persistir localmente as informações
-- Código limpo e organizado
-- Responsividade
-
-### Itens desejáveis
-
-- Testes unitários
-- React
-
-### Telas
-
-- [Tela inicial](https://test-frontend-uolpp.web.app/assets/images/tela-inicial.jpg)
-- [Tela de edição](https://test-frontend-uolpp.web.app/assets/images/tela-edicao.jpg)
-
-### Finalizando
-
-Ao finalizar seu teste nos envie um **pull request**.
+## Possiveis erros
+Quando a extensão do uol `UOL Analytics Debugger 3.2.3` está ativada, ocorrem comportamentos estranhos como o print abaixo. Para solucionar desabilite a extensão e limpe o localstorage
+![Erro na listagem](./src/assets/screenshot/erro-lista.png)
