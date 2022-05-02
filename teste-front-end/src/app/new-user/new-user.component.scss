@@ -31,4 +31,12 @@
     border-radius: 5px;
     background-color: white;
   }
+
+  input.ng-invalid.ng-touched{
+    border-color: red;
+  }
+
+  .error-message{
+    color: red;
+  }
 }

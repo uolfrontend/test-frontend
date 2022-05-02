@@ -4,21 +4,61 @@
     <div class="subtitle">Informe os campos a seguir para criar um usuário</div>
   </div>
 
-  <form action="" class="new-user-form">
-    <input type="text" placeholder="Nome">
-    <input type="email" name="email" placeholder="E-mail" required>
-    <input type="text" placeholder="CPF">
-    <input type="text" placeholder="Telefone">
-    <select name="status" id="status">
-      <option value="Status">Status</option>
-      <option value="active">Ativo</option>
-      <option value="inactive">Inativo</option>
-      <option value="waiting">Aguardadando ativação</option>
-      <option value="disabled">Desativado</option>
+  <form (ngSubmit)="onSubmit()" #form="ngForm" class="new-user-form">
+    <input
+      type="text"
+      placeholder="Nome"
+      [ngModel]="client.name"
+      name="name"
+    >
+
+    <input
+      type="email"
+      placeholder="E-mail"
+      name="email"
+      [ngModel]="client.email"
+      required
+      email
+      #email="ngModel"
+    >
+
+    <span class="error-message" *ngIf="!email.valid && email.touched">Preencha o campo de email corretamente</span>
+
+    <input
+      type="text"
+      placeholder="CPF"
+      name="id"
+      [ngModel]="client.id"
+      required      
+      #cpf="ngModel"
+    >
+
+    <span class="error-message" *ngIf="!cpf.valid && cpf.touched">O campo de cpf é obrigatório</span>
+
+    <input
+      type="text"
+      placeholder="Telefone"
+      name="phone"
+      [ngModel]="client.phone"
+    >
+
+    <select name="status" id="status" ngModel>
+      <option value="" disabled>Status</option>
+      <option *ngFor="let item of status" [ngValue]="item.key" [selected]="item.key == client.status">
+        {{ item.status }}
+      </option>
     </select>
+
     <div class="submit">
-      <app-button [button]="dataButton[0]"></app-button>
-      <app-button routerLink="/" [button]="dataButton[1]"></app-button>
+      <app-button
+        [button]="submit"
+        [disabled]="!form.valid">
+      </app-button>
+
+      <app-button
+        routerLink="/"
+        [button]="goBack">
+      </app-button>
     </div>
   </form>
 </div>
