@@ -1,0 +1,13 @@
+.btn-newClient {
+  background-color: var(--uolYellow);
+  color: #fff;
+  border: #fff solid 1.5px;
+  border-radius: 0.3rem;
+  transition: 0.3s;
+  font-weight: 700;
+}
+.btn-newClient:hover {
+  background-color: #fff;
+  color: var(--uolYellow);
+  border: var(--uolYellow) solid 1.5px;
+}
