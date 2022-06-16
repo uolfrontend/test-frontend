@@ -1,0 +1,31 @@
+.group {
+  margin-bottom: 1rem;
+
+  .select {
+    display: block;
+    width: 100%;
+    padding: 1rem 0.75rem;
+    font-size: 1rem;
+    color: #757575;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+    appearance: none;
+    background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiM2NjY2NjYiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0iZmVhdGhlciBmZWF0aGVyLWNoZXZyb24tZG93biI+PHBvbHlsaW5lIHBvaW50cz0iNiA5IDEyIDE1IDE4IDkiPjwvcG9seWxpbmU+PC9zdmc+')
+      no-repeat #fff;
+    background-position: 97% center;
+
+    &:focus {
+      outline: none;
+      border-color: var(--dark);
+    }
+  }
+
+  .error {
+    width: 100%;
+    margin-top: 0.25rem;
+    font-size: 0.813rem;
+    color: #dc3545;
+  }
+}
