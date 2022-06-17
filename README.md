@@ -22,7 +22,7 @@ A aplicação deve mostrar primeiramente uma listagem de clientes com todas info
 Instale as dependências e inicie o projeto
 
 ```bash
-  yarn && yarn dev
+  yarn && yarn start
 ```
 
 Gerar a versão para produção (opcional)
