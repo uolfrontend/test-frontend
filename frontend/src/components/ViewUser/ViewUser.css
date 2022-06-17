@@ -1,0 +1,119 @@
+.line {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  border: solid 1px #e8e8e8;
+  margin: 15px 0px;
+  /* color: var(--text-gray); */
+}
+
+.mediaDiv {
+  /* border: solid blue 5px; */
+  flex-basis: 100%;
+  height: 100%;
+  justify-content: space-between;
+}
+
+.mediaItem {
+  /* display: flex;
+  flex-basis: 100%; */
+  width: 100%;
+  min-height: 100%;
+  align-items: center;
+  /* border: solid green 3px; */
+  /* display: none; */
+}
+
+.cell {
+  /* border: solid green; */
+  padding: 20px 25px;
+}
+
+#btnEditar {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.editarBtn {
+  /* border: solid red; */
+}
+
+.btn-custom {
+  background-color: #fff;
+  color: var(--uolYellow);
+  border: var(--uolYellow) solid 1.5px;
+  border-radius: 0.3rem;
+  transition: 0.3s;
+  font-weight: 700;
+}
+.btn-custom:hover {
+  background-color: var(--uolYellow);
+  color: #fff;
+  border: #fff solid 1.5px;
+}
+
+@media (max-width: 550px) {
+  .line {
+    /* border: red 2px solid; */
+    display: flex;
+    flex-direction: column;
+    /* grid-template-columns: 1fr; */
+  }
+  .mediaDiv {
+    display: flex;
+    padding: 0;
+    margin: 0;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    justify-content: space-between;
+
+    /* border: red 2px solid; */
+  }
+}
+@media (min-width: 551px) {
+  .line {
+    /* border: blue 2px solid; */
+    display: flex;
+    flex-basis: 100%;
+    /* grid-template-columns: 1fr; */
+  }
+  .mediaDiv {
+    display: grid;
+    flex-direction: row;
+    grid-template-columns: 2fr 1fr;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    /* border: red 5px solid; */
+    height: 100%;
+    /* border: red 2px solid; */
+    font-size: 0.8rem;
+  }
+
+  .mediaItem {
+    display: flex;
+    /* border: blue 3px solid; */
+    /* justify-content: center; */
+  }
+
+  .mediaItem1st {
+    /* border: solid green 3px; */
+    /* width: 30rem; */
+    /* display: none; */
+  }
+  .name-email-cpf-phone {
+    /* border: solid red 5px; */
+    /* justify-content: start; */
+  }
+  .status-edit {
+    /* border: solid blue 5px; */
+    /* width: 30%; */
+    padding-left: 50px;
+    width: 100%;
+    /* justify-content: start; */
+    align-items: center;
+  }
+}
