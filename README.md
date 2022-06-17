@@ -1,32 +1,23 @@
-# Teste front-end - UOL Produtos Digitais
+## Sobre
+Teste realizado para o processo seletivo de desenvolvedor frontend da UOL
 
-### O Desafio
+# Aviso
+necessário ter a extensão cross-origin caso seu navegador bloqueie as requisições
 
-A aplicação deve mostrar primeiramente uma listagem de clientes com todas informações conforme o layout. Segundo, deve permitir a criação de novo cliente.
+#### Yarn
+> yarn
+#### NPM
+> npm install
+Para rodar o projeto rode
+#### Yarn
+> yarn start
+#### NPM
+> npm start
+## Executar os Testes
 
-### Começando
+Para executar os testes, rodar:
 
-Utilize o seguinte [endpoint](https://test-frontend-uolpp.web.app/customers.json) para o carregamento inicial da listagem de clientes.
-
-### Itens obrigatórios
-
-- Alertas para o usuário na tela de edição
-- Validação de CPF na tela de edição
-- Validação de telefone na tela de edição
-- Utilizar o *localStorage/IndexedDB* para persistir localmente as informações
-- Código limpo e organizado
-- Responsividade
-
-### Itens desejáveis
-
-- Testes unitários
-- React
-
-### Telas
-
-- [Tela inicial](https://test-frontend-uolpp.web.app/assets/images/tela-inicial.jpg)
-- [Tela de edição](https://test-frontend-uolpp.web.app/assets/images/tela-edicao.jpg)
-
-### Finalizando
-
-Ao finalizar seu teste nos envie um **pull request**.
+#### yarn
+> yarn test
+#### npm
+> npm run test
