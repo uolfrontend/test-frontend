@@ -110,11 +110,13 @@ const CustomerView = () => {
             return false
         }
 
-        const isExisting = await customerExisting(customer.id as string)
-        if (isExisting) {
-            setDescription('CPF já cadastrado no sistema')
-            setAlertOpen(true)
-            return false
+        if (!(id != "0")) {
+            const isExisting = await customerExisting(customer.id as string)
+            if (isExisting) {
+                setDescription('CPF já cadastrado no sistema')
+                setAlertOpen(true)
+                return false
+            }
         }
 
         return true;
