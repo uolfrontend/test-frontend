@@ -118,7 +118,7 @@ const Button = styled('button', {
 
 interface MyAlertProps {
     title: string
-    description?: string
+    description: string
     openAlert: boolean
     onOpenChange: (open: boolean) => void
 }

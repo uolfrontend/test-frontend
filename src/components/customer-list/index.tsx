@@ -5,10 +5,17 @@ import { ICustomer } from '../../interfaces/ICustomer';
 import Customer from '../customer';
 import { configDB } from '../../configs/database';
 
-const CustomerList = () => {
+interface Props {
+    testing?: boolean
+}
+
+const CustomerList = (props: Props) => {
+    const { testing } = props;
+
 
     useEffect(() => {
-        getCustomers()
+        if(!testing)
+            getCustomers()
     }, [])
 
     const [customers, setCustomers] = useState<ICustomer[]>([])
@@ -40,7 +47,7 @@ const CustomerList = () => {
     }, []);
 
     return (
-        <Container>
+        <Container data-testid="customer-list">
             {
                 customers.map((customer) => {
                     return <Customer key={customer.id} customer={customer} />

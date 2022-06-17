@@ -3,8 +3,8 @@ import { IconImg, HeaderContainer } from './style'
 
 const Header = () => {
     return (
-        <HeaderContainer>
-            <IconImg src="http://localhost:3000/src/img/uol-white.png" alt="icon teste" />
+        <HeaderContainer data-testid="header">
+            <IconImg src="http://localhost:3000/src/img/uol-white.png" alt="icon uol" />
         </HeaderContainer>
     );
 };

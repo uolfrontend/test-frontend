@@ -20,7 +20,7 @@ const Customer = (props: Props) => {
     }
 
     return (
-        <CustomerContainer>
+        <CustomerContainer data-testid="customer">
             <FirstInfos>
                 <Name>{name}</Name>
                 <Email>{email}</Email>
