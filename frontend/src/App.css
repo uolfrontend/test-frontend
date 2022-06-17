@@ -231,8 +231,8 @@ tr {
   margin: auto;
 }
 
-td {
-  border: solid;
+body td {
+  /* border: solid; */
 }
 
 td.btnPosition {

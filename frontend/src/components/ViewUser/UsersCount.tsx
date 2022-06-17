@@ -6,13 +6,12 @@ function UsersCount() {
 
     const { userData } = useContext(UsersContext)
 
-    if (userData.length >= 0) {
-        return (
-            <div className='usersData info'>
-                <p className='text'>Exibindo {userData.length} clientes</p>
-            </div>
-        )
-    }
+    return (
+        <div className='usersData info'>
+            <p className='text'>Exibindo {userData?.length} clientes</p>
+        </div>
+    )
+
 }
 
 export default UsersCount

@@ -6,15 +6,47 @@ const UsersContext = createContext()
 // Provider a ser exportado
 export const UsersProvider = ({ children }) => {
 
-    // Definindo useState
-    const [userData, setUserData] = useState([
-        { id: 51253653003, name: 'Camila Souza', email: 'camila.souza@email.com', phone: '(11) 93463-2347', status: 'active' },
-        { id: 39755382011, name: 'Pedro Ferreira', email: 'peferreira@email.com', phone: '(11) 95529-5678', status: 'inactive' },
-        { id: 92181821020, name: 'Marcela Silva', email: 'masilva@email.com', phone: '(11) 93470-3391', status: 'waiting' },
-        { id: 53327887039, name: 'Carlos Ferraz', email: 'carlosferraz@email.com', phone: '(11) 96744-0233', status: 'disabled' }
-    ])
+    // const [userData, setUserData] = useState([
+    //     { id: 51253653003, name: 'Camila Souza', email: 'camila.souza@email.com', phone: '(11) 93463-2347', status: 'active' },
+    //     { id: 39755382011, name: 'Pedro Ferreira', email: 'peferreira@email.com', phone: '(11) 95529-5678', status: 'inactive' },
+    //     { id: 92181821020, name: 'Marcela Silva', email: 'masilva@email.com', phone: '(11) 93470-3391', status: 'waiting' },
+    //     { id: 53327887039, name: 'Carlos Ferraz', email: 'carlosferraz@email.com', phone: '(11) 96744-0233', status: 'disabled' }
+    // ])
 
-    // const [userData, setUserData] = useState('');
+    const [userData, setUserData] = useState();
+    const [userDataLenght, setUserDataLenght] = useState();
+
+    const getUserData = async () => {
+        axios
+            .get('https://thingproxy.freeboard.io/fetch/https://test-frontend-uolpp.web.app/customers.json')
+            .then(function (response) {
+                const endpointData = response.data.customers;
+                console.log(endpointData);
+                setUserData(endpointData);
+                setUserDataLenght(userData?.lenght)
+                console.log(userData);
+            })
+            .catch(function (error) {
+                console.log(error);
+            })
+
+    }
+
+    useEffect(() => {
+        getUserData()
+        console.log(userData);
+    },
+        []
+    )
+
+    useEffect(() => {
+        setUserDataLenght(userData?.lenght)
+        console.log(userDataLenght);
+    },
+        [userData]
+    )
+
+
 
     // useEffect(() => axios
     //     .get('https://thingproxy.freeboard.io/fetch/https://test-frontend-uolpp.web.app/customers.json')
