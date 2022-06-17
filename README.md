@@ -25,7 +25,7 @@ Instale as dependências e inicie o projeto
   yarn && yarn start
 ```
 
-Gerar a versão para produção (opcional)
+Gerar os aquivos para produção (opcional)
 
 ```bash
   yarn build
