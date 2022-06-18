@@ -1,5 +1,4 @@
-@import './reset';
-@import './variables';
+@import './reset', './variables', './mixins';
 
 *,
 *:before,
@@ -9,13 +8,12 @@
 
 body {
   margin: 0;
-  font-family: 'Mukta', sans-serif;
-  font-size: 1rem;
+  font-family: var(--font-family);
   font-weight: 400;
   line-height: 1.5;
-  color: #212529;
+  color: var(--dark);
+  background-color: var(--white);
   text-align: left;
-  background-color: #fff;
 }
 
 strong {
@@ -23,7 +21,7 @@ strong {
 }
 
 small {
-  font-size: 80%;
+  font-size: 0.78rem;
 }
 
 h1,

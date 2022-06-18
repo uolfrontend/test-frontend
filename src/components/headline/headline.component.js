@@ -5,6 +5,7 @@ import { Button } from 'components/button'
 
 import styles from './headline.module.scss'
 import { ROUTES } from 'constants/routes.constants'
+import { BUTTON_SIZES } from 'constants/button.constants'
 
 export const Headline = ({ title, description, hasButton }) => {
   const navigate = useNavigate()
@@ -19,7 +20,7 @@ export const Headline = ({ title, description, hasButton }) => {
           </span>
           {hasButton && (
             <Button
-              isButtonSmall={true}
+              size={BUTTON_SIZES.SMALL}
               onClick={() => navigate(ROUTES().CUSTOMER_NEW)}
             >
               Novo cliente

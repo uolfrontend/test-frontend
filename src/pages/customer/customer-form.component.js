@@ -13,6 +13,7 @@ import styles from 'styles/pages/customer/customer-form.module.scss'
 import { CUSTOMERS_FIELDS } from 'constants/customers.constants'
 import { Loader } from 'components/loader'
 import { ROUTES } from 'constants/routes.constants'
+import { BUTTON_VARIANTS } from 'constants/button.constants'
 
 export const CustomerForm = ({ edit }) => {
   const { id } = useParams()
@@ -84,7 +85,7 @@ export const CustomerForm = ({ edit }) => {
                   </Button>
                   <Button
                     type="button"
-                    isOutlined={true}
+                    variant={BUTTON_VARIANTS.OUTLINED}
                     onClick={() => navigate(ROUTES().HOME)}
                   >
                     Voltar

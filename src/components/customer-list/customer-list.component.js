@@ -6,6 +6,7 @@ import { STATUS_LABEL } from 'constants/status.constants'
 
 import styles from './customer-list.module.scss'
 import { ROUTES } from 'constants/routes.constants'
+import { BUTTON_VARIANTS } from 'constants/button.constants'
 
 export const CustomerList = () => {
   const { customersState } = useCustomers()
@@ -29,16 +30,17 @@ export const CustomerList = () => {
               </span>
               <span>
                 <span
-                  className={`${styles.customer__item__sticon} ${
+                  className={[
+                    styles.customer__item__sticon,
                     styles[`customer__item__sticon--${user.status}`]
-                  }`}
+                  ].join(' ')}
                 />
                 {STATUS_LABEL[user.status]}
               </span>
               <span>
                 <Button
                   type="button"
-                  isOutlined={true}
+                  variant={BUTTON_VARIANTS.OUTLINED}
                   onClick={() => navigate(ROUTES([user.id]).CUSTOMER_EDIT)}
                 >
                   Editar
@@ -54,9 +56,13 @@ export const CustomerList = () => {
           </div>
         )}
       </div>
-      <div className={styles.customer__count}>
-        <span>Exibindo {users.length} clientes</span>
-      </div>
+      {users.length ? (
+        <div className={styles.customer__count}>
+          <span>Exibindo {users.length} cliente(s)</span>
+        </div>
+      ) : (
+        ''
+      )}
     </>
   )
 }
