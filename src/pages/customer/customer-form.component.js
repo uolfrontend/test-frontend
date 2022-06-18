@@ -48,7 +48,7 @@ export const CustomerForm = ({ edit }) => {
         title={edit ? 'Editar usuário' : 'Novo usuário'}
         description={`Informe os campos a seguir para ${
           edit ? 'editar' : 'criar'
-        } novo usuário`}
+        } usuário`}
       />
       <div className={styles.customer}>
         <div className={styles.customer__form}>

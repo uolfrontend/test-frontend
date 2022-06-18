@@ -4,14 +4,17 @@
   .input {
     display: block;
     width: 100%;
-    height: calc(1.5em + 1.45rem + 2px);
     padding: 1.25rem 0.75rem;
     font-size: 1rem;
-    color: #495057;
-    background-color: #fff;
+    color: var(--dark);
+    background-color: var(--white);
     background-clip: padding-box;
-    border: 1px solid #ced4da;
+    border: 1px solid var(--light);
     border-radius: 0.25rem;
+
+    &:hover {
+      border-color: var(--dark);
+    }
 
     &:focus {
       outline: none;
@@ -23,6 +26,6 @@
     width: 100%;
     margin-top: 0.25rem;
     font-size: 0.813rem;
-    color: #dc3545;
+    color: var(--danger);
   }
 }

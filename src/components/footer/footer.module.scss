@@ -1,8 +1,10 @@
-@import '../../styles/extend.scss';
+@use 'styles/extend';
 
 .footer {
   @extend .container;
+
   margin-top: auto;
+
   &__credits {
     padding: 3rem 0;
     text-align: center;
