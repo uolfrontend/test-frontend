@@ -1,10 +1,8 @@
 import useFetch from 'use-http'
-import toast from 'react-hot-toast'
 import { useLocalStorage, writeStorage } from '@rehooks/local-storage'
 import { API_ENDPOINTS } from 'constants/request.constants'
 import { useCallback, useEffect } from 'react'
-
-const notify = (message, severity) => toast[severity](message)
+import { notify } from 'utils/toast.utils'
 
 export const useCustomers = () => {
   const [customersState] = useLocalStorage('customers')
