@@ -1,0 +1,11 @@
+@use 'styles/extend';
+
+.layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  &__main {
+    @extend .container;
+  }
+}

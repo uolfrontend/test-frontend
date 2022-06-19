@@ -1,0 +1,33 @@
+.customer {
+  display: flex;
+  flex-direction: column;
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
+    @media (min-width: 768px) {
+      max-width: 280px;
+    }
+
+    .button__group {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+      gap: 15px;
+      margin-top: 2rem;
+
+      @media (max-width: 568px) {
+        flex-direction: column;
+      }
+
+      button {
+        @media (max-width: 568px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,35 @@
+.container {
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+
+  @media (min-width: 1200px) {
+    max-width: 1140px;
+  }
+}
+
+.button {
+  font-family: var(--font-family);
+  font-weight: 400;
+  display: inline-block;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 1.5;
+  user-select: none;
+  cursor: pointer;
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 0.2rem;
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &:hover {
+    background-color: var(--warning);
+    color: var(--white);
+  }
+}

@@ -1,32 +1,44 @@
-# Teste front-end - UOL Produtos Digitais
+# **Teste Frontend - UOL**
 
-### O Desafio
+![](https://img.shields.io/badge/React-18.2.0-blue)
+![](https://img.shields.io/badge/Sass-1.52.3-purple)
+![](https://img.shields.io/badge/Jest-5.16.4-green)
 
 A aplicação deve mostrar primeiramente uma listagem de clientes com todas informações conforme o layout. Segundo, deve permitir a criação de novo cliente.
 
-### Começando
+## Requerimentos
 
-Utilize o seguinte [endpoint](https://test-frontend-uolpp.web.app/customers.json) para o carregamento inicial da listagem de clientes.
+- Yarn
+- Node.js
 
-### Itens obrigatórios
+##
 
-- Alertas para o usuário na tela de edição
-- Validação de CPF na tela de edição
-- Validação de telefone na tela de edição
-- Utilizar o *localStorage/IndexedDB* para persistir localmente as informações
-- Código limpo e organizado
-- Responsividade
+## Clone o repositório
 
-### Itens desejáveis
+```bash
+  git clone https://github.com/allyssonharry/test-frontend-uol.git
+```
 
-- Testes unitários
-- React
+Instale as dependências e inicie o projeto
 
-### Telas
+```bash
+  yarn && yarn start
+```
 
-- [Tela inicial](https://test-frontend-uolpp.web.app/assets/images/tela-inicial.jpg)
-- [Tela de edição](https://test-frontend-uolpp.web.app/assets/images/tela-edicao.jpg)
+Gerar os aquivos para produção (opcional)
 
-### Finalizando
+```bash
+  yarn build
+```
 
-Ao finalizar seu teste nos envie um **pull request**.
+Para rodar os testes, execute
+
+```bash
+  yarn test --watchAll
+```
+
+## Variáveis de ambiente
+
+Renomeie o arquivo `env.example` para `.env`
+
+OBS: Não alterar a url: `https://app-relay-proxy.herokuapp.com` para evitar problemas com CORS no lado do cliente.

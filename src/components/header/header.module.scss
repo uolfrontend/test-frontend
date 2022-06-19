@@ -1,0 +1,35 @@
+@use 'styles/extend';
+
+.blackBar {
+  display: flex;
+  flex-direction: column;
+
+  &__inner {
+    background-color: var(--dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    a {
+      display: inline-flex;
+    }
+  }
+}
+
+.header {
+  @extend .container;
+
+  &__inner {
+    display: flex;
+    align-items: center;
+
+    padding: 4rem 0 1.45rem;
+    margin-bottom: 2rem;
+
+    border-bottom: 1px solid var(--light);
+
+    h1 {
+      font-size: 26px;
+    }
+  }
+}

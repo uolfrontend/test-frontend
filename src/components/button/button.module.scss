@@ -1,0 +1,30 @@
+@use 'styles/extend';
+@use 'styles/mixins';
+
+.button {
+  @extend .button;
+
+  &__small {
+    @include mixins.button-size(0.188rem 0.625rem, 0.875rem);
+  }
+
+  &__medium {
+    @include mixins.button-size(0.313rem 1.563rem, 1rem);
+  }
+
+  &__contained {
+    @include mixins.button-variant(
+      var(--white),
+      var(--warning),
+      var(--warning)
+    );
+  }
+
+  &__outlined {
+    @include mixins.button-variant(
+      var(--warning),
+      var(--white),
+      var(--warning) + var(--hex-alpha-50)
+    );
+  }
+}

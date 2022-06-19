@@ -1,0 +1,10 @@
+@mixin button-variant($color, $background-color, $border-color) {
+  background-color: $background-color;
+  border-color: $border-color;
+  color: $color;
+}
+
+@mixin button-size($padding, $font-size) {
+  font-size: $font-size;
+  padding: $padding;
+}
